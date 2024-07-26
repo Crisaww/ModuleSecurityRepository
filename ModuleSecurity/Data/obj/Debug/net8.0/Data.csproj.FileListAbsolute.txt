@@ -1,0 +1,12 @@
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Data\bin\Debug\net8.0\Data.deps.json
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Data\bin\Debug\net8.0\Data.dll
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Data\bin\Debug\net8.0\Data.pdb
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Data\obj\Debug\net8.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Data\obj\Debug\net8.0\Data.AssemblyInfoInputs.cache
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Data\obj\Debug\net8.0\Data.AssemblyInfo.cs
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Data\obj\Debug\net8.0\Data.csproj.CoreCompileInputs.cache
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Data\obj\Debug\net8.0\Data.sourcelink.json
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Data\obj\Debug\net8.0\Data.dll
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Data\obj\Debug\net8.0\refint\Data.dll
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Data\obj\Debug\net8.0\Data.pdb
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Data\obj\Debug\net8.0\ref\Data.dll

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Utilities\\Utilities.csproj": {}
+    "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Utilities\\Utilities.csproj": {}
   },
   "projects": {
-    "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Utilities\\Utilities.csproj": {
+    "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Utilities\\Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Utilities\\Utilities.csproj",
+        "projectUniqueName": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Utilities\\Utilities.csproj",
         "projectName": "Utilities",
-        "projectPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Utilities\\Utilities.csproj",
+        "projectPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Utilities\\Utilities.csproj",
         "packagesPath": "C:\\Users\\SENA\\.nuget\\packages\\",
-        "outputPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Utilities\\obj\\",
+        "outputPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Utilities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SENA\\AppData\\Roaming\\NuGet\\NuGet.Config",

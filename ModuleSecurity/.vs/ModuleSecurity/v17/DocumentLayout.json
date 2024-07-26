@@ -1,10 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\",
+  "WorkspaceRootPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2BE51C88-FD4B-4B0C-9715-51E042DD98F8}|Diagram\\Diagram.csproj|d:\\sena\\documents\\cristiannarvaez\\software\\csharp\\cisharp\\modulesecurity\\diagram\\dbmodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "AbsoluteMoniker": "D:0:0:{B08E3291-A714-4E9F-963E-8AD9254BFE23}|Data\\Data.csproj|d:\\sena\\documents\\cristiannarvaez\\software\\csharp\\modulesecurityrepository\\modulesecurity\\data\\interfaces\\iuserroledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B08E3291-A714-4E9F-963E-8AD9254BFE23}|Data\\Data.csproj|solutionrelative:data\\interfaces\\iuserroledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|d:\\sena\\documents\\cristiannarvaez\\software\\csharp\\modulesecurityrepository\\modulesecurity\\entity\\context\\aplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|solutionrelative:entity\\context\\aplicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BE51C88-FD4B-4B0C-9715-51E042DD98F8}|Diagram\\Diagram.csproj|d:\\sena\\documents\\cristiannarvaez\\software\\csharp\\modulesecurityrepository\\modulesecurity\\diagram\\dbmodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
       "RelativeMoniker": "D:0:0:{2BE51C88-FD4B-4B0C-9715-51E042DD98F8}|Diagram\\Diagram.csproj|solutionrelative:diagram\\dbmodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|d:\\sena\\documents\\cristiannarvaez\\software\\csharp\\modulesecurityrepository\\modulesecurity\\entity\\model\\security\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|solutionrelative:entity\\model\\security\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|d:\\sena\\documents\\cristiannarvaez\\software\\csharp\\modulesecurityrepository\\modulesecurity\\entity\\model\\security\\module.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|solutionrelative:entity\\model\\security\\module.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|d:\\sena\\documents\\cristiannarvaez\\software\\csharp\\modulesecurityrepository\\modulesecurity\\entity\\model\\security\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|solutionrelative:entity\\model\\security\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|d:\\sena\\documents\\cristiannarvaez\\software\\csharp\\modulesecurityrepository\\modulesecurity\\entity\\model\\security\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|solutionrelative:entity\\model\\security\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -13,20 +37,98 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedWidth": 266,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "IUserRoleData.cs",
+              "DocumentMoniker": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Data\\Interfaces\\IUserRoleData.cs",
+              "RelativeDocumentMoniker": "Data\\Interfaces\\IUserRoleData.cs",
+              "ToolTip": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Data\\Interfaces\\IUserRoleData.cs",
+              "RelativeToolTip": "Data\\Interfaces\\IUserRoleData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T22:44:24.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "DbModel.edmx [Diagram1]",
-              "DocumentMoniker": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Diagram\\DbModel.edmx",
+              "DocumentMoniker": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Diagram\\DbModel.edmx",
               "RelativeDocumentMoniker": "Diagram\\DbModel.edmx",
-              "ToolTip": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Diagram\\DbModel.edmx [Diagram1]",
+              "ToolTip": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Diagram\\DbModel.edmx [Diagram1]",
               "RelativeToolTip": "Diagram\\DbModel.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2024-07-26T18:08:57.899Z",
+              "WhenOpened": "2024-07-26T22:10:09.751Z",
               "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AplicationDbContext.cs",
+              "DocumentMoniker": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Context\\AplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Entity\\Context\\AplicationDbContext.cs",
+              "ToolTip": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Context\\AplicationDbContext.cs",
+              "RelativeToolTip": "Entity\\Context\\AplicationDbContext.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAA4wEUAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T20:58:12.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Role.cs",
+              "DocumentMoniker": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Model\\Security\\Role.cs",
+              "RelativeDocumentMoniker": "Entity\\Model\\Security\\Role.cs",
+              "ToolTip": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Model\\Security\\Role.cs",
+              "RelativeToolTip": "Entity\\Model\\Security\\Role.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAEwBQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T22:01:30.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Person.cs",
+              "DocumentMoniker": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Model\\Security\\Person.cs",
+              "RelativeDocumentMoniker": "Entity\\Model\\Security\\Person.cs",
+              "ToolTip": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Model\\Security\\Person.cs",
+              "RelativeToolTip": "Entity\\Model\\Security\\Person.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T19:46:04.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Model\\Security\\User.cs",
+              "RelativeDocumentMoniker": "Entity\\Model\\Security\\User.cs",
+              "ToolTip": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Model\\Security\\User.cs",
+              "RelativeToolTip": "Entity\\Model\\Security\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T19:45:53.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Module.cs",
+              "DocumentMoniker": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Model\\Security\\Module.cs",
+              "RelativeDocumentMoniker": "Entity\\Model\\Security\\Module.cs",
+              "ToolTip": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Model\\Security\\Module.cs",
+              "RelativeToolTip": "Entity\\Model\\Security\\Module.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-26T19:50:42.862Z",
+              "EditorCaption": ""
             }
           ]
         }

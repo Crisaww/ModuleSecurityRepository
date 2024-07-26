@@ -1,0 +1,7 @@
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Diagram\bin\Debug\Diagram.dll.config
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Diagram\bin\Debug\Diagram.dll
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Diagram\bin\Debug\Diagram.pdb
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Diagram\obj\Debug\Diagram.csproj.AssemblyReference.cache
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Diagram\obj\Debug\Diagram.csproj.CoreCompileInputs.cache
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Diagram\obj\Debug\Diagram.dll
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Diagram\obj\Debug\Diagram.pdb

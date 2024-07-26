@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Entity\\Entity.csproj": {}
+    "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Entity.csproj": {}
   },
   "projects": {
-    "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Entity\\Entity.csproj": {
+    "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Entity\\Entity.csproj",
+        "projectUniqueName": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Entity\\Entity.csproj",
+        "projectPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Entity.csproj",
         "packagesPath": "C:\\Users\\SENA\\.nuget\\packages\\",
-        "outputPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Entity\\obj\\",
+        "outputPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SENA\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,32 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

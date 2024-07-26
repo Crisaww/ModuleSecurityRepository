@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Data\\Data.csproj",
+      "projectUniqueName": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Data\\Data.csproj",
+      "projectPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Data\\Data.csproj",
       "packagesPath": "C:\\Users\\SENA\\.nuget\\packages\\",
-      "outputPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Data\\obj\\",
+      "outputPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SENA\\AppData\\Roaming\\NuGet\\NuGet.Config",

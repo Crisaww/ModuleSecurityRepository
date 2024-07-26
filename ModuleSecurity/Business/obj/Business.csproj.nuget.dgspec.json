@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Business\\Business.csproj": {}
+    "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Business\\Business.csproj": {}
   },
   "projects": {
-    "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Business\\Business.csproj": {
+    "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Business\\Business.csproj",
+        "projectUniqueName": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Business\\Business.csproj",
+        "projectPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Business\\Business.csproj",
         "packagesPath": "C:\\Users\\SENA\\.nuget\\packages\\",
-        "outputPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\CiSharp\\ModuleSecurity\\Business\\obj\\",
+        "outputPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\SENA\\AppData\\Roaming\\NuGet\\NuGet.Config",
