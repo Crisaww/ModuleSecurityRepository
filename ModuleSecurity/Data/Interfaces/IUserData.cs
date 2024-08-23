@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entity.Model.Security;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,10 @@ namespace Data.Interfaces
 {
     internal interface IUserData
     {
+
+        public Task Delete(int id);
+        public Task<User> GetById(int id);
+        public Task<User> Save(User entity);
+        public Task<User> Update(User entity);
     }
 }

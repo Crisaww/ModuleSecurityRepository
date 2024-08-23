@@ -9,7 +9,7 @@ using System.Reflection;
 
 namespace Entity.Context
 {
-    internal class AplicationDbContext : DbContext
+    public class AplicationDbContext : DbContext
     {
         protected readonly IConfiguration _configuration;
         public AplicationDbContext(DbContextOptions<AplicationDbContext> options, IConfiguration configuration) : base(options)

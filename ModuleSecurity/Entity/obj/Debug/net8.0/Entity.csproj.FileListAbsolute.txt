@@ -1,13 +1,13 @@
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Entity\bin\Debug\net8.0\Entity.deps.json
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Entity\bin\Debug\net8.0\Entity.runtimeconfig.json
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Entity\bin\Debug\net8.0\Entity.dll
+D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Entity\bin\Debug\net8.0\Entity.pdb
 D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Entity\obj\Debug\net8.0\Entity.csproj.AssemblyReference.cache
 D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Entity\obj\Debug\net8.0\Entity.GeneratedMSBuildEditorConfig.editorconfig
 D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Entity\obj\Debug\net8.0\Entity.AssemblyInfoInputs.cache
 D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Entity\obj\Debug\net8.0\Entity.AssemblyInfo.cs
 D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Entity\obj\Debug\net8.0\Entity.csproj.CoreCompileInputs.cache
 D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Entity\obj\Debug\net8.0\Entity.sourcelink.json
-D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Entity\bin\Debug\net8.0\Entity.deps.json
-D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Entity\bin\Debug\net8.0\Entity.runtimeconfig.json
-D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Entity\bin\Debug\net8.0\Entity.dll
-D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Entity\bin\Debug\net8.0\Entity.pdb
 D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Entity\obj\Debug\net8.0\Entity.dll
 D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Entity\obj\Debug\net8.0\refint\Entity.dll
 D:\SENA\Documents\CristianNarvaez\Software\CSharp\ModuleSecurityRepository\ModuleSecurity\Entity\obj\Debug\net8.0\Entity.pdb
