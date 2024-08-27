@@ -19,12 +19,9 @@ namespace Business.Implements
             await this.data.Delete(id);
         }
 
-        public async Task<IEnumerable<View>> GetAll()
+        public async Task<IEnumerable<ViewDto>> GetAll()
         {
             IEnumerable<View> views = await this.data.GetAll();
-
-
-            //REVISARRRRRR
             var viewDtos = views.Select(view => new ViewDto
             {
                 Id = view.Id,
@@ -38,26 +35,27 @@ namespace Business.Implements
             return viewDtos;
         }
 
+        public async Task<IEnumerable<DataSelectDto>> GetAllSelect()
+        {
+
+            return await this.data.GetAllSelect();
+        }
+
         public async Task<ViewDto> GetById(int id)
         {
             View view = await this.data.GetById(id);
-            if (view == null)
-            {
-                throw new Exception("Registro no encontrado");
-            }
+            ViewDto viewDto = new ViewDto();
 
-            ViewDto viewDto = new ViewDto
-            {
-                Id = view.Id,
-                Name = view.Name,
-                Description = view.Description,
-                Route = view.Route,
-                ModuleId = view.ModuleId,
-                State = view.State
-            };
-
+            viewDto.Id = view.Id;
+            viewDto.Name = view.Name;
+            viewDto.Description = view.Description;
+            viewDto.Route = view.Route;
+            viewDto.ModuleId = view.ModuleId;
+            viewDto.State = view.State;
             return viewDto;
         }
+
+           
 
         public View mapearDatos(View view, ViewDto entity)
         {
@@ -91,16 +89,5 @@ namespace Business.Implements
             view = this.mapearDatos(view, entity);
             await this.data.Update(view);
         }
-
-        Task<ViewDto> IViewBusiness.Save(ViewDto entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        Task<ViewDto> IViewBusiness.Update(ViewDto entity)
-        {
-            throw new NotImplementedException();
-        }
     }
-
 }

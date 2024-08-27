@@ -1,6 +1,7 @@
 ﻿using Business.Interfaces;
 using Data.Interfaces;
 using Entity.DTO;
+using Entity.Model.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Business.Implements
 {
-    public class ModuleBusiness
+    public class ModuleBusiness : IModuleBusiness
     {
         protected readonly IModuleData data;
 
@@ -25,83 +26,66 @@ namespace Business.Implements
 
         public async Task<IEnumerable<ModuleDto>> GetAll()
         {
-            IEnumerable<View> views = await this.data.GetAll();
-
-            var viewDtos = views.Select(view => new ViewDto
+            IEnumerable<Module> modules = await this.data.GetAll();
+            var moduleDtos = modules.Select(module => new ModuleDto
             {
-                Id = view.Id,
-                Name = view.Name,
-                Description = view.Description,
-                Route = view.Route,
-                ModuleId = view.ModuleId,
-                State = view.State
+                Id = module.Id,
+                Description = module.Description,
+                State = module.State
             });
 
-            return viewDtos;
+            return moduleDtos;
         }
 
-        public async Task<ViewDto> GetById(int id)
+        public async Task<IEnumerable<DataSelectDto>> GetAllSelect()
         {
-            View view = await this.data.GetById(id);
-            if (view == null)
-            {
-                throw new Exception("Registro no encontrado");
-            }
-
-            ViewDto viewDto = new ViewDto
-            {
-                Id = view.Id,
-                Name = view.Name,
-                Description = view.Description,
-                Route = view.Route,
-                ModuleId = view.ModuleId,
-                State = view.State
-            };
-
-            return viewDto;
+            return await this.data.GetAllSelect();
         }
 
-        public View mapearDatos(View view, ViewDto entity)
+        public async Task<ModuleDto> GetById(int id)
         {
-            view.Id = entity.Id;
-            view.Name = entity.Name;
-            view.Description = entity.Description;
-            view.Route = entity.Route;
-            view.ModuleId = entity.ModuleId;
-            view.State = entity.State;
-            return view;
+            Module module = await this.data.GetById(id);
+            ModuleDto moduleDto = new ModuleDto();
+
+            moduleDto.Id = module.Id;
+
+            moduleDto.Description = module.Description;
+
+            moduleDto.State = module.State;
+
+            return moduleDto;
         }
 
-        public async Task<View> Save(ViewDto entity)
+
+
+        public Module mapearDatos(Module module, ModuleDto entity)
         {
-            View view = new View
+            module.Id = entity.Id;
+            module.Description = entity.Description;
+            module.State = entity.State;
+            return module;
+        }
+
+        public async Task<Module> Save(ModuleDto entity)
+        {
+            Module module = new Module
             {
                 CreateAt = DateTime.Now.AddHours(-5)
             };
-            view = this.mapearDatos(view, entity);
-            view.Module = null;
-            return await this.data.Save(view);
+            module = this.mapearDatos(module, entity);
+            //module.Module = null;
+            return await this.data.Save(module);
         }
 
-        public async Task Update(ViewDto entity)
+        public async Task Update(ModuleDto entity)
         {
-            View view = await this.data.GetById(entity.Id);
-            if (view == null)
+            Module module = await this.data.GetById(entity.Id);
+            if (module == null)
             {
                 throw new Exception("Registro no encontrado");
             }
-            view = this.mapearDatos(view, entity);
-            await this.data.Update(view);
-        }
-
-        Task<ViewDto> IViewBusiness.Save(ViewDto entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        Task<ViewDto> IViewBusiness.Update(ViewDto entity)
-        {
-            throw new NotImplementedException();
+            module = this.mapearDatos(module, entity);
+            await this.data.Update(module);
         }
     }
 }

@@ -14,5 +14,6 @@ namespace Entity.DTO
         public String Phone { get; set; }
         public string Email { get; set; }
         public string Adress { get; set; }
+        public bool State { get; set; }
     }
 }

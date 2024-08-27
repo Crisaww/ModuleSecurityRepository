@@ -12,10 +12,10 @@ namespace Data.Implements
 {
     public class RoleData : IRoleData
     {
-        private readonly AplicationDbContext context;
+        private readonly ApplicationDbContext context;
         protected readonly IConfiguration configuration;
 
-        public RoleData(AplicationDbContext context, IConfiguration configuration)
+        public RoleData(ApplicationDbContext context, IConfiguration configuration)
         {
             this.context = context;
             this.configuration = configuration;
@@ -51,7 +51,7 @@ namespace Data.Implements
             return await context.QueryAsync<DataSelectDto>(sql);
         }
 
-        public async Task<IEnumerable<DataSelectDto>> GetAll()
+        public async Task<IEnumerable<Role>> GetAll()
         {
             var sql = @"SELECT 
                         *
@@ -61,7 +61,7 @@ namespace Data.Implements
                         Deleted_at IS NULL AND State = 1 
                     ORDER BY 
                         Id ASC";
-            return await context.QueryAsync<DataSelectDto>(sql);
+            return await context.QueryAsync<Role>(sql);
         }
 
         // Método para obtener un rol por su ID

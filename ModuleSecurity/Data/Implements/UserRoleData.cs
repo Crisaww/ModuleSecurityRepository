@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace Data.Implements
 {
-    public class UserRolData : IUserRoleData
+    public class UserRoleData : IUserRoleData
     {
-        private readonly AplicationDbContext context;
+        private readonly ApplicationDbContext context;
         protected readonly IConfiguration configuration;
 
-        public UserRolData(AplicationDbContext context, IConfiguration configuration)
+        public UserRoleData(ApplicationDbContext context, IConfiguration configuration)
         {
             this.context = context;
             this.configuration = configuration;
@@ -52,17 +52,17 @@ namespace Data.Implements
             return await context.QueryAsync<DataSelectDto>(sql);
         }
 
-        public async Task<IEnumerable<DataSelectDto>> GetAll()
+        public async Task<IEnumerable<UserRole>> GetAll()
         {
             var sql = @"SELECT 
                     *
                 FROM 
-                    UserRol 
+                    UserRole 
                 WHERE 
                     Deleted_at IS NULL AND State = 1 
                 ORDER BY 
                     Id ASC";
-            return await context.QueryAsync<DataSelectDto>(sql);
+            return await context.QueryAsync<UserRole>(sql);
         }
 
         // Método para obtener un UserRol por su ID

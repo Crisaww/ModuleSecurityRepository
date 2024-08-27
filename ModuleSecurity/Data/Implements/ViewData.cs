@@ -13,10 +13,10 @@ namespace Data.Implements
 {
     public class ViewRolData : IViewData
     {
-        private readonly AplicationDbContext context;
+        private readonly ApplicationDbContext context;
         protected readonly IConfiguration configuration;
 
-        public ViewRolData(AplicationDbContext context, IConfiguration configuration)
+        public ViewRolData(ApplicationDbContext context, IConfiguration configuration)
         {
             this.context = context;
             this.configuration = configuration;
@@ -52,6 +52,19 @@ namespace Data.Implements
             return await context.QueryAsync<DataSelectDto>(sql);
         }
 
+        public async Task<IEnumerable<View>> GetAll()
+        {
+            var sql = @"SELECT 
+                        *
+                    FROM 
+                        View 
+                    WHERE 
+                        Deleted_at IS NULL AND State = 1 
+                    ORDER BY 
+                        Id ASC";
+            return await context.QueryAsync<View>(sql);
+        }
+
         // Método para obtener un ViewRol por su ID
         public async Task<View> GetById(int id)
         {
@@ -75,11 +88,6 @@ namespace Data.Implements
         }
 
         Task<View> IViewData.Update(View entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<View>> GetAll()
         {
             throw new NotImplementedException();
         }

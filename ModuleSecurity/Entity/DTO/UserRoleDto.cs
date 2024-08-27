@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entity.DTO
 {
-    public class ModuleDto
+    public class UserRoleDto
     {
         public int Id { get; set; }
-        public string Description { get; set; }
         public bool State { get; set; }
     }
 }

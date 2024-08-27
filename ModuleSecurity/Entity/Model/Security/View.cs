@@ -19,6 +19,8 @@ namespace Entity.Model.Security
 
         public string ModuleId { get; set; }
         public string Module{ get; set; }
+
+       
     }
 }
 

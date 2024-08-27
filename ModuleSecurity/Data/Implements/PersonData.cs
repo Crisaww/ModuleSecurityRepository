@@ -13,10 +13,10 @@ namespace Data.Implements
 {
     public class PersonData : IPersonData
     {
-        private readonly AplicationDbContext context;
+        private readonly ApplicationDbContext context;
         protected readonly IConfiguration configuration;
 
-        public PersonData(AplicationDbContext context, IConfiguration configuration)
+        public PersonData(ApplicationDbContext context, IConfiguration configuration)
         {
             this.context = context;
             this.configuration = configuration;
@@ -52,7 +52,7 @@ namespace Data.Implements
             return await context.QueryAsync<DataSelectDto>(sql);
         }
 
-        public async Task<IEnumerable<DataSelectDto>> GetAll()
+        public async Task<IEnumerable<Person>> GetAll()
         {
             var sql = @"SELECT 
                         *
@@ -62,7 +62,7 @@ namespace Data.Implements
                         Deleted_at IS NULL AND State = 1 
                     ORDER BY 
                         Id ASC";
-            return await context.QueryAsync<DataSelectDto>(sql);
+            return await context.QueryAsync<Person>(sql);
         }
 
         // Método para obtener un rol por su ID
