@@ -1,18 +1,74 @@
-using System.Runtime.InteropServices;
+﻿using Business.Interfaces;
+using Entity.DTO;
+using Microsoft.AspNetCore.Mvc;
+using System.Reflection;
 
-// En proyectos de estilo SDK como este, varios atributos de ensamblado que definían
-// en este archivo se agregan ahora automáticamente durante la compilación y se rellenan
-// con valores definidos en las propiedades del proyecto. Para obtener detalles acerca
-// de los atributos que se incluyen y cómo personalizar este proceso, consulte https://aka.ms/assembly-info-properties
+namespace Web.Controllers.Implements
+{
+    namespace Controller.Implementacion
+    {
+        [ApiController]
+        [Route("[controller]")]
+        public class ModuleController : ControllerBase
+        {
+            private readonly IModuleBusiness _moduleBusiness;
 
+            public ModuleController(IModuleBusiness moduleBusiness)
+            {
+                _moduleBusiness = moduleBusiness;
+            }
 
-// Al establecer ComVisible en false, se consigue que los tipos de este ensamblado
-// no sean visibles para los componentes COM. Si tiene que acceder a un tipo en este
-// ensamblado desde COM, establezca el atributo ComVisible en true en ese tipo.
+            [HttpGet]
+            public async Task<ActionResult<IEnumerable<ModuleDto>>> GetAll()
+            {
+                var result = await _moduleBusiness.GetAll();
+                return Ok(result);
+            }
 
-[assembly: ComVisible(false)]
+            [HttpGet("{id}")]
+            public async Task<ActionResult<ModuleDto>> GetById(int id)
+            {
+                var result = await _moduleBusiness.GetById(id);
+                if (result == null)
+                {
+                    return NotFound();
+                }
 
-// El siguiente GUID es para el identificador de typelib, si este proyecto se expone
-// en COM.
+                return Ok(result);
+            }
 
-[assembly: Guid("99eefb65-d882-451e-8e47-67c23b19200b")]
+            [HttpPost]
+            public async Task<ActionResult<Module>> Save([FromBody] ModuleDto entity)
+            {
+                if (entity == null)
+                {
+                    return BadRequest("Entity is null");
+                }
+
+                var result = await _moduleBusiness.Save(entity);
+                return CreatedAtAction(nameof(GetById), new { id = result.Id }, result);
+            }
+
+            [HttpPut("{id}")]
+            public async Task<IActionResult> Update([FromBody] ModuleDto entity)
+            {
+                if (entity == null || entity.Id == 0)
+                {
+                    return BadRequest();
+                }
+
+                await _moduleBusiness.Update(entity);
+                return NoContent();
+            }
+
+            [HttpDelete("{id}")]
+            public async Task<IActionResult> Delete(int id)
+            {
+                await _moduleBusiness.Delete(id);
+                return NoContent();
+            }
+        }
+    }
+
+}
+

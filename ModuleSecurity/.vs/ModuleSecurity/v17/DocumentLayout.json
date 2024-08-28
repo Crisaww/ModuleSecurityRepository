@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{445BA065-DBCB-4C9B-8748-B737324DB4A7}|Web\\Web.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\web\\controllers\\implements\\viewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{445BA065-DBCB-4C9B-8748-B737324DB4A7}|Web\\Web.csproj|solutionrelative:web\\controllers\\implements\\viewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{445BA065-DBCB-4C9B-8748-B737324DB4A7}|Web\\Web.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\web\\controllers\\implements\\userrolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{445BA065-DBCB-4C9B-8748-B737324DB4A7}|Web\\Web.csproj|solutionrelative:web\\controllers\\implements\\userrolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{445BA065-DBCB-4C9B-8748-B737324DB4A7}|Web\\Web.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\web\\controllers\\implements\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{445BA065-DBCB-4C9B-8748-B737324DB4A7}|Web\\Web.csproj|solutionrelative:web\\controllers\\implements\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{445BA065-DBCB-4C9B-8748-B737324DB4A7}|Web\\Web.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\web\\controllers\\implements\\roleviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{445BA065-DBCB-4C9B-8748-B737324DB4A7}|Web\\Web.csproj|solutionrelative:web\\controllers\\implements\\roleviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{445BA065-DBCB-4C9B-8748-B737324DB4A7}|Web\\Web.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\web\\controllers\\implements\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{445BA065-DBCB-4C9B-8748-B737324DB4A7}|Web\\Web.csproj|solutionrelative:web\\controllers\\implements\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{445BA065-DBCB-4C9B-8748-B737324DB4A7}|Web\\Web.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\web\\controllers\\implements\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{445BA065-DBCB-4C9B-8748-B737324DB4A7}|Web\\Web.csproj|solutionrelative:web\\controllers\\implements\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{445BA065-DBCB-4C9B-8748-B737324DB4A7}|Web\\Web.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\web\\controllers\\implements\\modulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{445BA065-DBCB-4C9B-8748-B737324DB4A7}|Web\\Web.csproj|solutionrelative:web\\controllers\\implements\\modulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,14 +43,92 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ViewController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Web\\Controllers\\Implements\\ViewController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\ViewController.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Web\\Controllers\\Implements\\ViewController.cs",
+              "RelativeToolTip": "Web\\Controllers\\Implements\\ViewController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T04:17:47.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRoleController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Web\\Controllers\\Implements\\UserRoleController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\UserRoleController.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Web\\Controllers\\Implements\\UserRoleController.cs",
+              "RelativeToolTip": "Web\\Controllers\\Implements\\UserRoleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T04:16:31.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Web\\Controllers\\Implements\\UserController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\UserController.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Web\\Controllers\\Implements\\UserController.cs",
+              "RelativeToolTip": "Web\\Controllers\\Implements\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T04:14:03.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RoleViewController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Web\\Controllers\\Implements\\RoleViewController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\RoleViewController.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Web\\Controllers\\Implements\\RoleViewController.cs",
+              "RelativeToolTip": "Web\\Controllers\\Implements\\RoleViewController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T04:12:28.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Web\\Controllers\\Implements\\RoleController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\RoleController.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Web\\Controllers\\Implements\\RoleController.cs",
+              "RelativeToolTip": "Web\\Controllers\\Implements\\RoleController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T04:11:16.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PersonController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Web\\Controllers\\Implements\\PersonController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\PersonController.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Web\\Controllers\\Implements\\PersonController.cs",
+              "RelativeToolTip": "Web\\Controllers\\Implements\\PersonController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T04:07:45.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ModuleController.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Web\\Controllers\\Implements\\ModuleController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\ModuleController.cs",
               "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Web\\Controllers\\Implements\\ModuleController.cs",
               "RelativeToolTip": "Web\\Controllers\\Implements\\ModuleController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAmwEgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T03:48:18.107Z",
+              "WhenOpened": "2024-08-28T03:59:34.905Z",
               "EditorCaption": ""
             }
           ]
