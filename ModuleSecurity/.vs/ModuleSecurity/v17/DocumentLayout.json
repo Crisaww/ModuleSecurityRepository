@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\",
+  "WorkspaceRootPath": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DF962152-DA32-43ED-A050-69E3652C71ED}|Business\\Business.csproj|d:\\sena\\documents\\cristiannarvaez\\software\\csharp\\modulesecurityrepository\\modulesecurity\\business\\implements\\viewbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DF962152-DA32-43ED-A050-69E3652C71ED}|Business\\Business.csproj|solutionrelative:business\\implements\\viewbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{445BA065-DBCB-4C9B-8748-B737324DB4A7}|Web\\Web.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\web\\controllers\\implements\\modulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{445BA065-DBCB-4C9B-8748-B737324DB4A7}|Web\\Web.csproj|solutionrelative:web\\controllers\\implements\\modulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ViewBusiness.cs",
-              "DocumentMoniker": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Business\\Implements\\ViewBusiness.cs",
-              "RelativeDocumentMoniker": "Business\\Implements\\ViewBusiness.cs",
-              "ToolTip": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Business\\Implements\\ViewBusiness.cs",
-              "RelativeToolTip": "Business\\Implements\\ViewBusiness.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCIAAAAcAAAA",
+              "Title": "ModuleController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Web\\Controllers\\Implements\\ModuleController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\Implements\\ModuleController.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Web\\Controllers\\Implements\\ModuleController.cs",
+              "RelativeToolTip": "Web\\Controllers\\Implements\\ModuleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T22:46:45.556Z",
+              "WhenOpened": "2024-08-28T03:48:18.107Z",
               "EditorCaption": ""
             }
           ]

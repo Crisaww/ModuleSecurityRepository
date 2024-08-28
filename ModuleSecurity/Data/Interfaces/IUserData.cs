@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Data.Interfaces
 {
-    internal interface IUserData
+    public interface IUserData
     {
 
         public Task Delete(int id);

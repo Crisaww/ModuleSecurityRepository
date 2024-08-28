@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Data.Implements
 {
-    public class RoleViewData : IRoleView
+    public class RoleViewData : IRoleViewData
     {
         private readonly ApplicationDbContext context;
         protected readonly IConfiguration configuration;
@@ -87,7 +87,7 @@ namespace Data.Implements
             await context.SaveChangesAsync();
         }
 
-        Task<RoleView> IRoleView.Update(RoleView entity)
+        Task<RoleView> IRoleViewData.Update(RoleView entity)
         {
             throw new NotImplementedException();
         }

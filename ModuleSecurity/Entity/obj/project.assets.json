@@ -4142,19 +4142,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SENA\\.nuget\\packages\\": {}
+    "C:\\Users\\USER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Entity.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Entity.csproj",
       "projectName": "Entity",
-      "projectPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Entity.csproj",
-      "packagesPath": "C:\\Users\\SENA\\.nuget\\packages\\",
-      "outputPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\obj\\",
+      "projectPath": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Entity.csproj",
+      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\SENA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4162,7 +4162,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4227,7 +4226,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

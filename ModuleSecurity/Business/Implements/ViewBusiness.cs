@@ -75,7 +75,7 @@ namespace Business.Implements
                 CreateAt = DateTime.Now.AddHours(-5)
             };
             view = this.mapearDatos(view, entity);
-            view.Module = null;
+            //view.Module = null;
             return await this.data.Save(view);
         }
 

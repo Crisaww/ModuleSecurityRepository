@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <Folder Include="Controllers\Interfaces\" />
-    <Folder Include="Controllers\Implements\" />
+    <Folder Include="Controllers\Interfaces\" />
   </ItemGroup>
 
 </Project>
