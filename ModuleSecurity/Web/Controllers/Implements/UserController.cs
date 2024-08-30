@@ -1,13 +1,14 @@
 ﻿using Business.Interfaces;
 using Entity.DTO;
 using Microsoft.AspNetCore.Mvc;
+using Web.Controllers.Interfaces;
 
 namespace Web.Controllers.Implements
 {
 
     [ApiController]
     [Route("[controller]")]
-    public class UserController : ControllerBase
+    public class UserController : ControllerBase, IUserController
     {
         private readonly IUserBusiness _userBusiness;
 

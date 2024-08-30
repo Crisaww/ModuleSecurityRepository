@@ -1,7 +1,9 @@
 ﻿using Business.Interfaces;
 using Entity.DTO;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection;
+using Web.Controllers.Interfaces;
 
 namespace Web.Controllers.Implements
 {
@@ -9,7 +11,7 @@ namespace Web.Controllers.Implements
     {
         [ApiController]
         [Route("[controller]")]
-        public class ModuleController : ControllerBase
+        public class ModuleController : ControllerBase, IModuleController
         {
             private readonly IModuleBusiness _moduleBusiness;
 
@@ -66,6 +68,11 @@ namespace Web.Controllers.Implements
             {
                 await _moduleBusiness.Delete(id);
                 return NoContent();
+            }
+
+            Task<ActionResult<ModuleDto>> IModuleController.Save(ModuleDto ModuleDto)
+            {
+                throw new NotImplementedException();
             }
         }
     }

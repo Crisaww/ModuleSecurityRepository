@@ -1,13 +1,14 @@
 ﻿using Business.Interfaces;
 using Entity.DTO;
 using Microsoft.AspNetCore.Mvc;
+using Web.Controllers.Interfaces;
 
 namespace Web.Controllers.Implements
 {
 
     [ApiController]
     [Route("[controller]")]
-    public class RoleViewController : ControllerBase
+    public class RoleViewController : ControllerBase, IRoleViewController
     {
         private readonly IRoleViewBusiness _roleViewBusiness;
 
