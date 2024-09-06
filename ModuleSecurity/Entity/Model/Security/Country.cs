@@ -10,10 +10,13 @@ namespace Entity.Model.Security
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Poblation { get; set; }
+        public DateTime CreateAt { get; set; }
+        public DateTime UpdateAt { get; set; }
+        public DateTime ? DeleteAt { get; set; }
+        public string Population { get; set; }
         public string Capital { get; set; }
         public string Coin { get; set; }
-        public string Language { get; set; }
+        public string Official_language { get; set; }
 
     }
 }

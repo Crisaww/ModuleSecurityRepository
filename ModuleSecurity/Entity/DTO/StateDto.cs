@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entity.Model
+namespace Entity.DTO
 {
-    public class State
+    public class StateDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Poblation { get; set; }
         public string Capital { get; set; }
     }
 }
