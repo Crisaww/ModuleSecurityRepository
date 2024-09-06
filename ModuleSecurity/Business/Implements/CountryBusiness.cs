@@ -31,7 +31,10 @@ namespace Business.Implements
             {
                 Id = country.Id,
                 Name = country.Name,
-                Capital = country.Capital
+                Population = country.Population,
+                Capital = country.Capital,
+                Coin = country.Coin,
+                Official_language = country.Official_language
             });
 
             return countryDtos;
@@ -49,7 +52,10 @@ namespace Business.Implements
 
             countryDto.Id = country.Id;
             countryDto.Name = country.Name;
+            countryDto.Population = country.Population;
             countryDto.Capital = country.Capital;
+            countryDto.Coin = country.Coin;
+            countryDto.Official_language = country.Official_language;
 
             return countryDto;
         }
@@ -58,7 +64,10 @@ namespace Business.Implements
         {
             country.Id = entity.Id;
             country.Name = entity.Name;
+            country.Population = entity.Population;
             country.Capital = entity.Capital;
+            country.Coin = entity.Coin;
+            country.Official_language = entity.Official_language;
             return country;
         }
 

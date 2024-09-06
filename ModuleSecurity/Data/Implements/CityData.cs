@@ -3,11 +3,6 @@ using Entity.Context;
 using Entity.DTO;
 using Entity.Model.Security;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Data.Implements
 {
@@ -44,9 +39,9 @@ namespace Data.Implements
                         Id, 
                         CONCAT(Name, ' - ', Population) AS TextoMostrar 
                     FROM 
-                        City 
+                        Cities 
                     WHERE 
-                        Deleted_at IS NULL AND State = 1 
+                        DeleteAt IS NULL AND State = 1 
                     ORDER BY 
                         Id ASC";
             return await context.QueryAsync<DataSelectDto>(sql);
@@ -57,9 +52,9 @@ namespace Data.Implements
             var sql = @"SELECT 
                         *
                     FROM 
-                        City 
+                        Cities 
                     WHERE 
-                        Deleted_at IS NULL AND State = 1 
+                        DeleteAt IS NULL AND State = 1 
                     ORDER BY 
                         Id ASC";
             return await context.QueryAsync<City>(sql);
@@ -68,7 +63,7 @@ namespace Data.Implements
         // Método para obtener una ciudad por su ID
         public async Task<City> GetById(int id)
         {
-            var sql = @"SELECT * FROM City WHERE Id = @Id ORDER BY Id ASC";
+            var sql = @"SELECT * FROM Cities WHERE Id = @Id ORDER BY Id ASC";
             return await this.context.QueryFirstOrDefaultAsync<City>(sql, new { Id = id });
         }
 

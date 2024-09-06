@@ -46,7 +46,7 @@ namespace Data.Implements
                 FROM 
                     UserRol 
                 WHERE 
-                    Deleted_at IS NULL AND State = 1 
+                    DeleteAt IS NULL AND State = 1 
                 ORDER BY 
                     Id ASC";
             return await context.QueryAsync<DataSelectDto>(sql);

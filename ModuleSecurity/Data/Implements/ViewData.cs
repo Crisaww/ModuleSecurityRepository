@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace Data.Implements
 {
-    public class ViewRolData : IViewData
+    public class ViewData : IViewData
     {
         private readonly ApplicationDbContext context;
         protected readonly IConfiguration configuration;
 
-        public ViewRolData(ApplicationDbContext context, IConfiguration configuration)
+        public ViewData(ApplicationDbContext context, IConfiguration configuration)
         {
             this.context = context;
             this.configuration = configuration;
