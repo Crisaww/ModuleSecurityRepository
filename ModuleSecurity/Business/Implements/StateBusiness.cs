@@ -31,6 +31,7 @@ namespace Business.Implements
             {
                 Id = state.Id,
                 Name = state.Name,
+                Population = state.Population,
                 Capital = state.Capital
             });
 
@@ -49,6 +50,7 @@ namespace Business.Implements
 
             stateDto.Id = state.Id;
             stateDto.Name = state.Name;
+            stateDto.Population = state.Population;
             stateDto.Capital = state.Capital;
 
             return stateDto;
@@ -58,6 +60,7 @@ namespace Business.Implements
         {
             state.Id = entity.Id;
             state.Name = entity.Name;
+            state.Population = entity.Population;
             state.Capital = entity.Capital;
             return state;
         }

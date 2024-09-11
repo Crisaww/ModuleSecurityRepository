@@ -42,11 +42,11 @@ namespace Data.Implements
         {
             var sql = @"SELECT 
                         Id, 
-                        CONCAT(Name, ' - ', Capital) AS TextoMostrar 
+                        CONCAT(Name, ' - ', Population, ' - ' Capital) AS TextoMostrar 
                     FROM 
-                        State 
+                        States 
                     WHERE 
-                        DeleteAt IS NULL AND State = 1 
+                        DeleteAt IS NULL AND States = 1 
                     ORDER BY 
                         Id ASC";
             return await context.QueryAsync<DataSelectDto>(sql);
@@ -57,9 +57,9 @@ namespace Data.Implements
             var sql = @"SELECT 
                         *
                     FROM 
-                        State 
+                        States 
                     WHERE 
-                        DeleteAt IS NULL AND State = 1 
+                        DeleteAt IS NULL AND States = 1 
                     ORDER BY 
                         Id ASC";
             return await context.QueryAsync<State>(sql);
@@ -68,7 +68,7 @@ namespace Data.Implements
         // Método para obtener un estado por su ID
         public async Task<State> GetById(int id)
         {
-            var sql = @"SELECT * FROM State WHERE Id = @Id ORDER BY Id ASC";
+            var sql = @"SELECT * FROM States WHERE Id = @Id ORDER BY Id ASC";
             return await this.context.QueryFirstOrDefaultAsync<State>(sql, new { Id = id });
         }
 
@@ -85,11 +85,6 @@ namespace Data.Implements
         {
             context.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             await context.SaveChangesAsync();
-        }
-
-        Task<State> IStateData.Update(State entity)
-        {
-            throw new NotImplementedException();
         }
     }
 

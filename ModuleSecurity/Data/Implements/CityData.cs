@@ -81,10 +81,5 @@ namespace Data.Implements
             context.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             await context.SaveChangesAsync();
         }
-
-        Task<City> ICityData.Update(City entity)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

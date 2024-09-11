@@ -88,10 +88,5 @@ namespace Data.Implements
             await context.SaveChangesAsync();
         }
 
-        Task<Country> ICountryData.Update(Country entity)
-        {
-            throw new NotImplementedException();
-        }
-
     }
 }

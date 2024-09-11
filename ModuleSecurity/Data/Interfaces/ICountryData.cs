@@ -14,8 +14,8 @@ namespace Data.Interfaces
         public Task Delete(int id);
         public Task<Country> GetById(int id);
         public Task<IEnumerable<Country>> GetAll();
-        public Task<Country> Save(Country entity);
-        public Task<Country> Update(Country entity);
+        public Task<Country> Save(Country Country);
+        public Task Update(Country Country);
         public Task<IEnumerable<DataSelectDto>> GetAllSelect();
     }
 }
