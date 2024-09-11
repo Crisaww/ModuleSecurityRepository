@@ -976,12 +976,6 @@
       "System.Text.Json/8.0.4": {
         "dependencies": {
           "System.Text.Encodings.Web": "8.0.0"
-        },
-        "runtime": {
-          "lib/net8.0/System.Text.Json.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.724.31311"
-          }
         }
       },
       "System.Threading.Channels/6.0.0": {},
@@ -1022,7 +1016,10 @@
           "Data": "1.0.0"
         },
         "runtime": {
-          "Business.dll": {}
+          "Business.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Data/1.0.0": {
@@ -1030,7 +1027,10 @@
           "Entity": "1.0.0"
         },
         "runtime": {
-          "Data.dll": {}
+          "Data.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Entity/1.0.0": {
@@ -1041,7 +1041,10 @@
           "MySql.EntityFrameworkCore": "8.0.5"
         },
         "runtime": {
-          "Entity.dll": {}
+          "Entity.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

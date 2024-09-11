@@ -31,7 +31,8 @@ namespace Business.Implements
             {
                 Id = city.Id,
                 Name = city.Name,
-                Population = city.Population
+                Population = city.Population,
+                YearFundation = city.YearFundation
             });
 
             return cityDtos;
@@ -50,6 +51,7 @@ namespace Business.Implements
             cityDto.Id = city.Id;
             cityDto.Name = city.Name;
             cityDto.Population = city.Population;
+            cityDto.YearFundation = city.YearFundation;
 
             return cityDto;
         }
@@ -59,6 +61,7 @@ namespace Business.Implements
             city.Id = entity.Id;
             city.Name = entity.Name;
             city.Population = entity.Population;
+            city.YearFundation = entity.YearFundation;
             return city;
         }
 

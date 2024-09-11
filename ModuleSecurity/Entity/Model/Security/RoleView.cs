@@ -14,8 +14,9 @@ namespace Entity.Model.Security
         public DateTime ? DeleteAt { get; set; }
         public bool State { get; set; }
         public string RoleId { get; set; }
+        public string ViewId { get; set; }
         public Role Role { get; set; }
         public View View { get; set; }
-        public string ViewId { get; set; }
+        
     }
 }

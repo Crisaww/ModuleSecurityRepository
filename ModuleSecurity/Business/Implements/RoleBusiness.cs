@@ -30,6 +30,7 @@ namespace Business.Implements
             var roleDtos = roles.Select(role => new RoleDto
             {
                 Id = role.Id,
+                Name = role.Name,
                 Description = role.Description,
                 State = role.State
             });
@@ -48,9 +49,8 @@ namespace Business.Implements
             RoleDto roleDto = new RoleDto();
 
             roleDto.Id = role.Id;
-
+            roleDto.Name = role.Name;
             roleDto.Description = role.Description;
-
             roleDto.State = role.State;
 
             return roleDto;
@@ -59,6 +59,7 @@ namespace Business.Implements
         public Role mapearDatos(Role role, RoleDto entity)
         {
             role.Id = entity.Id;
+            role.Name = entity.Name;
             role.Description = entity.Description;
             role.State = entity.State;
             return role;

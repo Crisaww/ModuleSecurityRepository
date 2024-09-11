@@ -3643,19 +3643,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SENA\\.nuget\\packages\\": {}
+    "C:\\Users\\USER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Business\\Business.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Business\\Business.csproj",
       "projectName": "Business",
-      "projectPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Business\\Business.csproj",
-      "packagesPath": "C:\\Users\\SENA\\.nuget\\packages\\",
-      "outputPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Business\\obj\\",
+      "projectPath": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Business\\Business.csproj",
+      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\SENA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3670,8 +3670,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Data\\Data.csproj": {
-              "projectPath": "D:\\SENA\\Documents\\CristianNarvaez\\Software\\CSharp\\ModuleSecurityRepository\\ModuleSecurity\\Data\\Data.csproj"
+            "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Data\\Data.csproj"
             }
           }
         }
@@ -3706,16 +3706,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
-    }
-  ]
+  }
 }
