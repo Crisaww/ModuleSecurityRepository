@@ -37,6 +37,8 @@ namespace Business.Implements
                 Phone = person.Phone,
                 Email = person.Email,
                 Adress = person.Adress,
+                Type_document = person.Type_document,
+                Document = person.Document,
                 State = person.State
             });
 
@@ -60,6 +62,8 @@ namespace Business.Implements
             PersonDto.Phone = person.Phone;
             PersonDto.Email = person.Email;
             PersonDto.Adress = person.Adress;
+            PersonDto.Type_document = person.Type_document;
+            PersonDto.Document = person.Document;
             PersonDto.State = person.State;
             return PersonDto;
         }
@@ -74,6 +78,8 @@ namespace Business.Implements
             person.Phone = entity.Phone;
             person.Email = entity.Email;
             person.Adress = entity.Adress;
+            person.Type_document = entity.Type_document;
+            person.Document = entity.Document;
             person.State = entity.State;
             return person;
         }
@@ -85,7 +91,6 @@ namespace Business.Implements
                 CreateAt = DateTime.Now.AddHours(-5)
             };
             person = this.mapearDatos(person, entity);
-            //person.Module = null;
             return await this.data.Save(person);
         }
 

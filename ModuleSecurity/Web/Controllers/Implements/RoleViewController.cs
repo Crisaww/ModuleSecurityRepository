@@ -1,5 +1,6 @@
 ﻿using Business.Interfaces;
 using Entity.DTO;
+using Entity.Model.Security;
 using Microsoft.AspNetCore.Mvc;
 using Web.Controllers.Interfaces;
 
@@ -37,7 +38,7 @@ namespace Web.Controllers.Implements
         }
 
         [HttpPost]
-        public async Task<ActionResult<RoleViewDto>> Save([FromBody] RoleViewDto entity)
+        public async Task<ActionResult<RoleView>> Save([FromBody] RoleViewDto entity)
         {
             if (entity == null)
             {
@@ -65,6 +66,11 @@ namespace Web.Controllers.Implements
         {
             await _roleViewBusiness.Delete(id);
             return NoContent();
+        }
+
+        Task<ActionResult<RoleViewDto>> IRoleViewController.Save(RoleViewDto RoleViewDto)
+        {
+            throw new NotImplementedException();
         }
     }
 }

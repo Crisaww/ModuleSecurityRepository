@@ -1,5 +1,6 @@
 ﻿using Business.Interfaces;
 using Entity.DTO;
+using Entity.Model.Security;
 using Microsoft.AspNetCore.Mvc;
 using Web.Controllers.Interfaces;
 
@@ -36,7 +37,7 @@ namespace Web.Controllers.Implements
         }
 
         [HttpPost]
-        public async Task<ActionResult<RoleDto>> Save([FromBody] RoleDto entity)
+        public async Task<ActionResult<Role>> Save([FromBody] RoleDto entity)
         {
             if (entity == null)
             {
@@ -66,5 +67,9 @@ namespace Web.Controllers.Implements
             return NoContent();
         }
 
+        Task<ActionResult<RoleDto>> IRoleController.Save(RoleDto RoleDto)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

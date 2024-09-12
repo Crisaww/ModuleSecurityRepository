@@ -42,9 +42,9 @@ namespace Data.Implements
         {
             var sql = @"SELECT 
                     Id, 
-                    CONCAT(Name, ' - ', Description) AS TextoMostrar 
+                    CONCAT(Username, ' - ', Password, ' - ', State) AS TextoMostrar 
                 FROM 
-                    User 
+                    Users 
                 WHERE 
                     DeleteAt IS NULL AND State = 1 
                 ORDER BY 
@@ -57,7 +57,7 @@ namespace Data.Implements
             var sql = @"SELECT 
                     *
                 FROM 
-                    User 
+                    Users 
                 WHERE 
                     Deleted_at IS NULL AND State = 1 
                 ORDER BY 
@@ -68,7 +68,7 @@ namespace Data.Implements
         // Método para obtener un usuario por su ID
         public async Task<User> GetById(int id)
         {
-            var sql = @"SELECT * FROM User WHERE Id = @Id ORDER BY Id ASC";
+            var sql = @"SELECT * FROM Users WHERE Id = @Id ORDER BY Id ASC";
             return await this.context.QueryFirstOrDefaultAsync<User>(sql, new { Id = id });
         }
 

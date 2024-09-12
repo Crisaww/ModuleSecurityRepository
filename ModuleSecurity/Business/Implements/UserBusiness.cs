@@ -32,6 +32,7 @@ namespace Business.Implements
             {
                 Id = user.Id,
                 Username = user.Username,
+                Password = user.Password,
                 PersonId = user.PersonId,
                 State = user.State
             });
@@ -51,6 +52,7 @@ namespace Business.Implements
 
             userDto.Id = user.Id;
             userDto.Username = user.Username;
+            userDto.Password = user.Password;
             userDto.PersonId = user.PersonId;
             userDto.State = user.State;
 
@@ -61,6 +63,7 @@ namespace Business.Implements
         {
             user.Id = entity.Id;
             user.Username = user.Username;
+            user.Password = user.Password;
             user.PersonId = user.PersonId;
             user.State = entity.State;
             return user;

@@ -362,7 +362,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Entity.DTO.PersonDto",
+        "Type": "Entity.Model.Security.Person",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -471,7 +471,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Entity.DTO.RoleDto",
+        "Type": "Entity.Model.Security.Role",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -580,7 +580,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Entity.DTO.RoleViewDto",
+        "Type": "Entity.Model.Security.RoleView",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -798,7 +798,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Entity.DTO.UserDto",
+        "Type": "Entity.Model.Security.User",
         "MediaTypes": [
           "text/plain",
           "application/json",

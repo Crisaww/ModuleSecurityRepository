@@ -41,9 +41,9 @@ namespace Data.Implements
         {
             var sql = @"SELECT 
                         Id, 
-                        CONCAT(Name, ' - ', Description) AS TextoMostrar 
+                        CONCAT(Name, ' - ', Description, ' - ', State) AS TextoMostrar 
                     FROM 
-                        Role 
+                        Roles 
                     WHERE 
                         DeleteAt IS NULL AND State = 1 
                     ORDER BY 
@@ -56,7 +56,7 @@ namespace Data.Implements
             var sql = @"SELECT 
                         *
                     FROM 
-                        Role 
+                        Roles 
                     WHERE 
                         Deleted_at IS NULL AND State = 1 
                     ORDER BY 
@@ -67,7 +67,7 @@ namespace Data.Implements
         // Método para obtener un rol por su ID
         public async Task<Role> GetById(int id)
         {
-            var sql = @"SELECT * FROM Role WHERE Id = @Id ORDER BY Id ASC";
+            var sql = @"SELECT * FROM Roles WHERE Id = @Id ORDER BY Id ASC";
             return await this.context.QueryFirstOrDefaultAsync<Role>(sql, new { Id = id });
         }
 
@@ -84,11 +84,6 @@ namespace Data.Implements
         {
             context.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             await context.SaveChangesAsync();
-        }
-
-        Task<Role> IRoleData.Update(Role entity)
-        {
-            throw new NotImplementedException();
         }
     }
 }

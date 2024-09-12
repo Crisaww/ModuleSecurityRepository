@@ -41,10 +41,10 @@ namespace Data.Implements
         public async Task<IEnumerable<DataSelectDto>> GetAllSelect()
         {
             var sql = @"SELECT 
-                Id
-                AS TextoMostrar 
+                Id, 
+                CONCAT(State, ' - ', RoleId, ' - ', ViewId, ' - ' Role, ' - ', View) AS TextoMostrar 
             FROM 
-                RoleView 
+                roleViews 
             WHERE 
                 DeleteAt IS NULL AND State = 1 
             ORDER BY 
@@ -57,7 +57,7 @@ namespace Data.Implements
             var sql = @"SELECT 
                 *
             FROM 
-                RoleView 
+                roleViews
             WHERE 
                 DeleteAt IS NULL AND State = 1 
             ORDER BY 
@@ -68,7 +68,7 @@ namespace Data.Implements
         // Método para obtener un rol por su ID
         public async Task<RoleView> GetById(int id)
         {
-            var sql = @"SELECT * FROM RoleView WHERE Id = @Id ORDER BY Id ASC";
+            var sql = @"SELECT * FROM roleViews WHERE Id = @Id ORDER BY Id ASC";
             return await this.context.QueryFirstOrDefaultAsync<RoleView>(sql, new { Id = id });
         }
 

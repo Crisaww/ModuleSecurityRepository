@@ -42,9 +42,9 @@ namespace Data.Implements
         {
             var sql = @"SELECT 
                 Id, 
-                CONCAT(First_name, ' - ', Last_name, ' - ', Phone, ' - ', Email, ' - ', Adress) AS TextoMostrar 
+                CONCAT(First_name, ' - ', Last_name, ' - ', Phone, ' - ', Email, ' - ', Adress, ' - ', Type_document, ' - ', Document, ' - ', State) AS TextoMostrar 
             FROM 
-                Person 
+                persons 
             WHERE 
                 DeleteAt IS NULL AND State = 1 
             ORDER BY 
@@ -57,7 +57,7 @@ namespace Data.Implements
             var sql = @"SELECT 
                         *
                     FROM 
-                        Person 
+                        persons 
                     WHERE 
                         Deleted_at IS NULL AND State = 1 
                     ORDER BY 
@@ -68,7 +68,7 @@ namespace Data.Implements
         // Método para obtener un rol por su ID
         public async Task<Person> GetById(int id)
         {
-            var sql = @"SELECT * FROM Person WHERE Id = @Id ORDER BY Id ASC";
+            var sql = @"SELECT * FROM persons WHERE Id = @Id ORDER BY Id ASC";
             return await this.context.QueryFirstOrDefaultAsync<Person>(sql, new { Id = id });
         }
 
@@ -86,11 +86,5 @@ namespace Data.Implements
             context.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             await context.SaveChangesAsync();
         }
-
-        Task<Person> IPersonData.Update(Person entity)
-        {
-            throw new NotImplementedException();
-        }
-
     }
 }

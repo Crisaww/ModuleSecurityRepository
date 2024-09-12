@@ -7,6 +7,7 @@ namespace Web.Controllers.Interfaces
     {
 
         public Task<ActionResult<IEnumerable<PersonDto>>> GetAll();
+        public Task<ActionResult<PersonDto>> GetById(int id);
         public Task<ActionResult<PersonDto>> Save([FromBody] PersonDto PersonDto);
         public Task<IActionResult> Update([FromBody] PersonDto PersonDto);
         public Task<IActionResult> Delete(int id);

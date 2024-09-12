@@ -15,8 +15,8 @@ namespace Data.Interfaces
         public Task<Role> GetById(int id);
 
         Task<IEnumerable<Role>> GetAll();
-        public Task<Role> Save(Role entity);
-        public Task<Role> Update(Role entity);
+        public Task<Role> Save(Role Role);
+        public Task Update(Role Role);
         Task<IEnumerable<DataSelectDto>> GetAllSelect();
 
     }

@@ -16,6 +16,6 @@ namespace Entity.Model.Security
         public DateTime ? DeleteAt { get; set; }
         public bool State { get; set; }
         public string PersonId { get; set; }
-        public string Person{ get; set; }
+        //public string Person{ get; set; }
     }
 }

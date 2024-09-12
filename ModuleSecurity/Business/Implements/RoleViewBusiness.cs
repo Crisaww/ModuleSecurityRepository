@@ -33,6 +33,8 @@ namespace Business.Implements
                 Id = roleview.Id,
                 RoleId = roleview.RoleId,
                 ViewId = roleview.ViewId,
+                Role = roleview.Role,
+                View = roleview.View,
                 State = roleview.State
             });
 
@@ -52,6 +54,8 @@ namespace Business.Implements
             roleviewDto.Id = roleview.Id;
             roleviewDto.RoleId = roleview.RoleId;
             roleviewDto.ViewId = roleview.ViewId;
+            roleviewDto.Role = roleview.Role;
+            roleviewDto.View = roleview.View;
             roleviewDto.State = roleview.State;
 
             return roleviewDto;
@@ -62,6 +66,8 @@ namespace Business.Implements
             roleview.Id = entity.Id;
             roleview.RoleId = entity.RoleId;
             roleview.ViewId = entity.ViewId;
+            roleview.Role = entity.Role;
+            roleview.View = entity.View;
             roleview.State = entity.State;
             return roleview;
         }
@@ -73,7 +79,6 @@ namespace Business.Implements
                 CreateAt = DateTime.Now.AddHours(-5)
             };
             roleview = this.mapearDatos(roleview, entity);
-            //roleview.RoleView = null;
             return await this.data.Save(roleview);
         }
 
