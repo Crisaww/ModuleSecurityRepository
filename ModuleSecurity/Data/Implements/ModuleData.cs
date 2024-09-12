@@ -42,9 +42,9 @@ namespace Data.Implements
         {
             var sql = @"SELECT 
                         Id, 
-                        Description AS TextoMostrar 
+                        CONCAT(Description, ' - ', State) AS TextoMostrar 
                     FROM 
-                        Module 
+                        modules 
                     WHERE 
                         DeleteAt IS NULL AND State = 1 
                     ORDER BY 
@@ -57,7 +57,7 @@ namespace Data.Implements
             var sql = @"SELECT 
                         *
                     FROM 
-                        Module 
+                        modules 
                     WHERE 
                         DeleteAt IS NULL AND State = 1 
                     ORDER BY 
@@ -68,7 +68,7 @@ namespace Data.Implements
         // Método para obtener un rol por su ID
         public async Task<Module> GetById(int id)
         {
-            var sql = @"SELECT * FROM Module WHERE Id = @Id ORDER BY Id ASC";
+            var sql = @"SELECT * FROM modules WHERE Id = @Id ORDER BY Id ASC";
             return await this.context.QueryFirstOrDefaultAsync<Module>(sql, new { Id = id });
         }
 
@@ -85,11 +85,6 @@ namespace Data.Implements
         {
             context.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             await context.SaveChangesAsync();
-        }
-
-        Task<Module> IModuleData.Update(Module entity)
-        {
-            throw new NotImplementedException();
         }
     }
 }

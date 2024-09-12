@@ -702,10 +702,7 @@
           "Entity": "1.0.0"
         },
         "runtime": {
-          "Data.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Data.dll": {}
         }
       },
       "Entity/1.0.0": {
@@ -716,10 +713,7 @@
           "MySql.EntityFrameworkCore": "8.0.5"
         },
         "runtime": {
-          "Entity.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Entity.dll": {}
         }
       }
     }

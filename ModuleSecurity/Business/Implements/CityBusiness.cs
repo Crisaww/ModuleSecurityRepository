@@ -32,6 +32,7 @@ namespace Business.Implements
                 Id = city.Id,
                 Name = city.Name,
                 Population = city.Population,
+                StateId = city.StateId,
                 YearFundation = city.YearFundation
             });
 
@@ -51,6 +52,7 @@ namespace Business.Implements
             cityDto.Id = city.Id;
             cityDto.Name = city.Name;
             cityDto.Population = city.Population;
+            cityDto.StateId = city.StateId;
             cityDto.YearFundation = city.YearFundation;
 
             return cityDto;
@@ -61,6 +63,7 @@ namespace Business.Implements
             city.Id = entity.Id;
             city.Name = entity.Name;
             city.Population = entity.Population;
+            city.StateId = entity.StateId;
             city.YearFundation = entity.YearFundation;
             return city;
         }

@@ -14,8 +14,8 @@ namespace Data.Interfaces
         public Task Delete(int id);
         public Task<Module> GetById(int id);
         public Task<IEnumerable<Module>> GetAll();
-        public Task<Module> Save(Module entity);
-        public Task<Module> Update(Module entity);
+        public Task<Module> Save(Module Module);
+        public Task Update(Module Module);
         public Task<IEnumerable<DataSelectDto>> GetAllSelect();
     }
 }

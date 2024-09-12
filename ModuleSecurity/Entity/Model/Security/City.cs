@@ -13,6 +13,9 @@ namespace Entity.Model.Security
         public DateTime CreateAt { get; set; }
         public DateTime UpdateAt { get; set; }
         public DateTime ? DeleteAt { get; set; }
+
+        public int StateId {  get; set; }
+        public State State { get; set; }
         public string Population { get; set; }
         public DateTime YearFundation { get; set; }
     }
