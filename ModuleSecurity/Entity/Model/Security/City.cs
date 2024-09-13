@@ -14,9 +14,10 @@ namespace Entity.Model.Security
         public DateTime UpdateAt { get; set; }
         public DateTime ? DeleteAt { get; set; }
 
-        public int StateId {  get; set; }
-        public State State { get; set; }
+        public int DepartmentId {  get; set; }
+        public Department Department { get; set; }
         public string Population { get; set; }
         public DateTime YearFundation { get; set; }
+        
     }
 }

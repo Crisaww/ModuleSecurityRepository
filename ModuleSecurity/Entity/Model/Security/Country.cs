@@ -17,6 +17,8 @@ namespace Entity.Model.Security
         public string Capital { get; set; }
         public string Coin { get; set; }
         public string Official_language { get; set; }
+        public bool State { get; set; }
+
 
     }
 }

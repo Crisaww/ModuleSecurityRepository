@@ -37,7 +37,7 @@ namespace Data.Implements
         {
             var sql = @"SELECT 
                         Id, 
-                        CONCAT(Name, ' - ', Population, ' - ', StateId, ' - ', YearFundation) AS TextoMostrar 
+                        CONCAT(Name, ' - ', Population, ' - ', DepartmentId, ' - ', YearFundation) AS TextoMostrar 
                     FROM 
                         cities 
                     WHERE 
@@ -47,17 +47,18 @@ namespace Data.Implements
             return await context.QueryAsync<DataSelectDto>(sql);
         }
 
-        public async Task<IEnumerable<City>> GetAll()
+        public async Task<IEnumerable<CityDto>> GetAll()
         {
-            var sql = @"SELECT 
-                        *
-                    FROM 
-                        cities 
-                    WHERE 
-                        DeleteAt IS NULL AND State = 1 
-                    ORDER BY 
-                        Id ASC";
-            return await context.QueryAsync<City>(sql);
+            var sql = @"SELECT
+                        	ci.Id,
+	                        ci.Name,
+                            ci.population,
+                            ci.DepartmentId,
+                            de.Name AS Department
+
+                            FROM cities AS ci
+                            INNER JOIN departments AS de ON de.Id = ci.DepartmentId";
+            return await context.QueryAsync<CityDto>(sql);
         }
 
         // Método para obtener una ciudad por su ID

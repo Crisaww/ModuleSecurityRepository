@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace Data.Implements
 {
-    public class StateData : IStateData
+    public class DepartmentData : IDepartmentData
     {
         private readonly ApplicationDbContext context;
         protected readonly IConfiguration configuration;
 
-        public StateData(ApplicationDbContext context, IConfiguration configuration)
+        public DepartmentData(ApplicationDbContext context, IConfiguration configuration)
         {
             this.context = context;
             this.configuration = configuration;
@@ -33,7 +33,7 @@ namespace Data.Implements
 
             // Corregido: Asignación correcta de la propiedad DeleteAt
             entity.DeleteAt = DateTime.Today;
-            context.States.Update(entity);
+            context.Departments.Update(entity);
             await context.SaveChangesAsync();
         }
 
@@ -44,7 +44,7 @@ namespace Data.Implements
                         Id, 
                         CONCAT(Name, ' - ', Population, ' - ' Capital) AS TextoMostrar 
                     FROM 
-                        States 
+                        departments 
                     WHERE 
                         DeleteAt IS NULL AND States = 1 
                     ORDER BY 
@@ -52,36 +52,36 @@ namespace Data.Implements
             return await context.QueryAsync<DataSelectDto>(sql);
         }
 
-        public async Task<IEnumerable<State>> GetAll()
+        public async Task<IEnumerable<Department>> GetAll()
         {
             var sql = @"SELECT 
                         *
                     FROM 
-                        States 
+                        departments 
                     WHERE 
                         DeleteAt IS NULL AND States = 1 
                     ORDER BY 
                         Id ASC";
-            return await context.QueryAsync<State>(sql);
+            return await context.QueryAsync<Department>(sql);
         }
 
         // Método para obtener un estado por su ID
-        public async Task<State> GetById(int id)
+        public async Task<Department> GetById(int id)
         {
-            var sql = @"SELECT * FROM States WHERE Id = @Id ORDER BY Id ASC";
-            return await this.context.QueryFirstOrDefaultAsync<State>(sql, new { Id = id });
+            var sql = @"SELECT * FROM departments WHERE Id = @Id ORDER BY Id ASC";
+            return await this.context.QueryFirstOrDefaultAsync<Department>(sql, new { Id = id });
         }
 
         // Método para guardar un nuevo estado
-        public async Task<State> Save(State entity)
+        public async Task<Department> Save(Department entity)
         {
-            context.States.Add(entity);
+            context.Departments.Add(entity);
             await context.SaveChangesAsync();
             return entity;
         }
 
         // Método para actualizar un estado existente
-        public async Task Update(State entity)
+        public async Task Update(Department entity)
         {
             context.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             await context.SaveChangesAsync();

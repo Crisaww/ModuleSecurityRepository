@@ -8,24 +8,24 @@ namespace Web.Controllers.Implements
 {
     [ApiController]
     [Route("[controller]")]
-    public class StateController : ControllerBase, IStateController
+    public class DepartmentController : ControllerBase, IDepartmentController
     {
         private readonly IStateBusiness _stateBusiness;
 
-        public StateController(IStateBusiness stateBusiness)
+        public DepartmentController(IStateBusiness stateBusiness)
         {
             _stateBusiness = stateBusiness;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<StateDto>>> GetAll()
+        public async Task<ActionResult<IEnumerable<DepartmentDto>>> GetAll()
         {
             var result = await _stateBusiness.GetAll();
             return Ok(result);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<StateDto>> GetById(int id)
+        public async Task<ActionResult<DepartmentDto>> GetById(int id)
         {
             var result = await _stateBusiness.GetById(id);
             if (result == null)
@@ -37,7 +37,7 @@ namespace Web.Controllers.Implements
         }
 
         [HttpPost]
-        public async Task<ActionResult<State>> Save([FromBody] StateDto entity)
+        public async Task<ActionResult<Department>> Save([FromBody] DepartmentDto entity)
         {
             if (entity == null)
             {
@@ -49,7 +49,7 @@ namespace Web.Controllers.Implements
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromBody] StateDto entity)
+        public async Task<IActionResult> Update([FromBody] DepartmentDto entity)
         {
             if (entity == null || entity.Id == 0)
             {
@@ -67,7 +67,7 @@ namespace Web.Controllers.Implements
             return NoContent();
         }
 
-        Task<ActionResult<StateDto>> IStateController.Save(StateDto StateDto)
+        Task<ActionResult<DepartmentDto>> IDepartmentController.Save(DepartmentDto StateDto)
         {
             throw new NotImplementedException();
         }

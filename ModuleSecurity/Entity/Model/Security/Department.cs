@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entity.Model.Security
 {
-    public class State
+    public class Department
     {
         public int Id { get; set; }
         public string Name { get; set; }

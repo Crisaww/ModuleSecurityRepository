@@ -12,7 +12,8 @@ namespace Entity.DTO
         public int Id { get; set; }
         public string Name { get; set; }
         public string Population { get; set; }
-        public int StateId { get; set; }
+        public string ? Department { get; set; }
+        public int DepartmentId { get; set; }
         public DateTime YearFundation { get; set; }
       
     }

@@ -43,7 +43,7 @@ namespace Data.Implements
         {
             var sql = @"SELECT 
                         Id, 
-                        CONCAT(Name, ' - ', Population, ' - ', Capital, ' - ', Coin, ' - ', Official_language) AS TextoMostrar 
+                        CONCAT(Name, ' - ', Population, ' - ', Capital, ' - ', Coin, ' - ', Official_language, ' - ', State) AS TextoMostrar 
                     FROM 
                         countries 
                     WHERE 
@@ -53,7 +53,7 @@ namespace Data.Implements
             return await context.QueryAsync<DataSelectDto>(sql);
         }
 
-        public async Task<IEnumerable<Country>> GetAll()
+        public async Task<IEnumerable<CountryDto>> GetAll()
         {
             var sql = @"SELECT 
                         *
@@ -63,7 +63,7 @@ namespace Data.Implements
                         DeleteAt IS NULL AND State = 1 
                     ORDER BY 
                         Id ASC";
-            return await context.QueryAsync<Country>(sql);
+            return await context.QueryAsync<CountryDto>(sql);
         }
 
         // Método para obtener un rol por su ID

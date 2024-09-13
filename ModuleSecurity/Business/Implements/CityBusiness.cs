@@ -26,17 +26,17 @@ namespace Business.Implements
 
         public async Task<IEnumerable<CityDto>> GetAll()
         {
-            IEnumerable<City> cities = await this.data.GetAll();
-            var cityDtos = cities.Select(city => new CityDto
-            {
-                Id = city.Id,
-                Name = city.Name,
-                Population = city.Population,
-                StateId = city.StateId,
-                YearFundation = city.YearFundation
-            });
+            IEnumerable<CityDto> cities = await this.data.GetAll();
+            //var cityDtos = cities.Select(city => new CityDto
+            //{
+            //    Id = city.Id,
+            //    Name = city.Name,
+            //    Population = city.Population,
+            //    DepartmentId = city.DepartmentId,
+            //    YearFundation = city.YearFundation
+            //});
 
-            return cityDtos;
+            return cities;
         }
 
         public async Task<IEnumerable<DataSelectDto>> GetAllSelect()
@@ -52,7 +52,7 @@ namespace Business.Implements
             cityDto.Id = city.Id;
             cityDto.Name = city.Name;
             cityDto.Population = city.Population;
-            cityDto.StateId = city.StateId;
+            cityDto.DepartmentId = city.DepartmentId;
             cityDto.YearFundation = city.YearFundation;
 
             return cityDto;
@@ -63,7 +63,7 @@ namespace Business.Implements
             city.Id = entity.Id;
             city.Name = entity.Name;
             city.Population = entity.Population;
-            city.StateId = entity.StateId;
+            city.DepartmentId = entity.DepartmentId;
             city.YearFundation = entity.YearFundation;
             return city;
         }

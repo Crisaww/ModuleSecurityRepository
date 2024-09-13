@@ -32,6 +32,9 @@
       <End Role="View" EntitySet="ViewSet" />
       <End Role="Module" EntitySet="ModuleSet" />
     </AssociationSet>
+    <EntitySet Name="CitySet" EntityType="DbModel.City" />
+    <EntitySet Name="CountrySet" EntityType="DbModel.Country" />
+    <EntitySet Name="StateSet" EntityType="DbModel.State" />
   </EntityContainer>
   <EntityType Name="Person">
     <Key>
@@ -149,4 +152,41 @@
     <End Type="DbModel.View" Role="View" Multiplicity="*" />
     <End Type="DbModel.Module" Role="Module" Multiplicity="1" />
   </Association>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="CreateAt" Type="DateTime" Nullable="false" />
+    <Property Name="UpdateAt" Type="DateTime" Nullable="false" />
+    <Property Name="DeleteAt" Type="DateTime" Nullable="false" />
+    <Property Name="Population" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="CreateAt" Type="DateTime" Nullable="false" />
+    <Property Name="UpdateAt" Type="DateTime" Nullable="false" />
+    <Property Name="DeleteAt" Type="DateTime" Nullable="false" />
+    <Property Name="Population" Type="String" Nullable="false" />
+    <Property Name="Capital" Type="String" Nullable="false" />
+    <Property Name="Coin" Type="String" Nullable="false" />
+    <Property Name="Official_language" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="State">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="CreateAt" Type="DateTime" Nullable="false" />
+    <Property Name="UpdateAt" Type="DateTime" Nullable="false" />
+    <Property Name="DeleteAt" Type="DateTime" Nullable="false" />
+    <Property Name="Population" Type="String" Nullable="false" />
+    <Property Name="Capital" Type="String" Nullable="false" />
+  </EntityType>
 </Schema>

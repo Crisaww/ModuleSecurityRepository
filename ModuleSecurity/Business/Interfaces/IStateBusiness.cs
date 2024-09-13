@@ -11,10 +11,10 @@ namespace Business.Interfaces
     public interface IStateBusiness
     {
         public Task Delete(int id);
-        public Task<StateDto> GetById(int id);
-        public Task<IEnumerable<StateDto>> GetAll();
+        public Task<DepartmentDto> GetById(int id);
+        public Task<IEnumerable<DepartmentDto>> GetAll();
         public Task<IEnumerable<DataSelectDto>> GetAllSelect();
-        public Task<State> Save(StateDto entity);
-        public Task Update(StateDto entity);
+        public Task<Department> Save(DepartmentDto entity);
+        public Task Update(DepartmentDto entity);
     }
 }

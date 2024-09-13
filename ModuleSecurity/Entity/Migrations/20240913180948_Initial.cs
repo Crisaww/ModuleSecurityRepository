@@ -37,6 +37,25 @@ namespace Entity.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "Departments",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(type: "longtext", nullable: false),
+                    CreateAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    UpdateAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    DeleteAt = table.Column<DateTime>(type: "datetime(6)", nullable: true),
+                    Population = table.Column<string>(type: "longtext", nullable: false),
+                    Capital = table.Column<string>(type: "longtext", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Departments", x => x.Id);
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "Modulos",
                 columns: table => new
                 {
@@ -99,25 +118,6 @@ namespace Entity.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
-                name: "States",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(type: "longtext", nullable: false),
-                    CreateAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    UpdateAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    DeleteAt = table.Column<DateTime>(type: "datetime(6)", nullable: true),
-                    Population = table.Column<string>(type: "longtext", nullable: false),
-                    Capital = table.Column<string>(type: "longtext", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_States", x => x.Id);
-                })
-                .Annotation("MySQL:Charset", "utf8mb4");
-
-            migrationBuilder.CreateTable(
                 name: "UserRoles",
                 columns: table => new
                 {
@@ -139,6 +139,32 @@ namespace Entity.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "Cities",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(type: "longtext", nullable: false),
+                    CreateAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    UpdateAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    DeleteAt = table.Column<DateTime>(type: "datetime(6)", nullable: true),
+                    DepartmentId = table.Column<int>(type: "int", nullable: false),
+                    Population = table.Column<string>(type: "longtext", nullable: false),
+                    YearFundation = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Cities", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Cities_Departments_DepartmentId",
+                        column: x => x.DepartmentId,
+                        principalTable: "Departments",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySQL:Charset", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "Views",
                 columns: table => new
                 {
@@ -151,14 +177,14 @@ namespace Entity.Migrations
                     DeleteAt = table.Column<DateTime>(type: "datetime(6)", nullable: true),
                     State = table.Column<bool>(type: "tinyint(1)", nullable: false),
                     Route = table.Column<string>(type: "longtext", nullable: false),
-                    ModuleId = table.Column<int>(type: "int", nullable: false)
+                    ModuloId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Views", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Views_Modulos_ModuleId",
-                        column: x => x.ModuleId,
+                        name: "FK_Views_Modulos_ModuloId",
+                        column: x => x.ModuloId,
                         principalTable: "Modulos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -186,32 +212,6 @@ namespace Entity.Migrations
                         name: "FK_Users_Persons_PersonId",
                         column: x => x.PersonId,
                         principalTable: "Persons",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                })
-                .Annotation("MySQL:Charset", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "Cities",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
-                    Name = table.Column<string>(type: "longtext", nullable: false),
-                    CreateAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    UpdateAt = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    DeleteAt = table.Column<DateTime>(type: "datetime(6)", nullable: true),
-                    StateId = table.Column<int>(type: "int", nullable: false),
-                    Population = table.Column<string>(type: "longtext", nullable: false),
-                    YearFundation = table.Column<DateTime>(type: "datetime(6)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Cities", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Cities_States_StateId",
-                        column: x => x.StateId,
-                        principalTable: "States",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 })
@@ -249,9 +249,9 @@ namespace Entity.Migrations
                 .Annotation("MySQL:Charset", "utf8mb4");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Cities_StateId",
+                name: "IX_Cities_DepartmentId",
                 table: "Cities",
-                column: "StateId");
+                column: "DepartmentId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_RoleViews_RoleId",
@@ -269,9 +269,9 @@ namespace Entity.Migrations
                 column: "PersonId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Views_ModuleId",
+                name: "IX_Views_ModuloId",
                 table: "Views",
-                column: "ModuleId");
+                column: "ModuloId");
         }
 
         /// <inheritdoc />
@@ -293,7 +293,7 @@ namespace Entity.Migrations
                 name: "Users");
 
             migrationBuilder.DropTable(
-                name: "States");
+                name: "Departments");
 
             migrationBuilder.DropTable(
                 name: "Roles");

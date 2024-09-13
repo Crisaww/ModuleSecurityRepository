@@ -26,18 +26,18 @@ namespace Business.Implements
 
         public async Task<IEnumerable<CountryDto>> GetAll()
         {
-            IEnumerable<Country> countries = await this.data.GetAll();
-            var countryDtos = countries.Select(country => new CountryDto
-            {
-                Id = country.Id,
-                Name = country.Name,
-                Population = country.Population,
-                Capital = country.Capital,
-                Coin = country.Coin,
-                Official_language = country.Official_language
-            });
+            IEnumerable<CountryDto> countries = await this.data.GetAll();
+            //var countryDtos = countries.Select(country => new CountryDto
+            //{
+            //    Id = country.Id,
+            //    Name = country.Name,
+            //    Population = country.Population,
+            //    Capital = country.Capital,
+            //    Coin = country.Coin,
+            //    Official_language = country.Official_language
+            //});
 
-            return countryDtos;
+            return countries;
         }
 
         public async Task<IEnumerable<DataSelectDto>> GetAllSelect()
@@ -56,6 +56,7 @@ namespace Business.Implements
             countryDto.Capital = country.Capital;
             countryDto.Coin = country.Coin;
             countryDto.Official_language = country.Official_language;
+            countryDto.State = country.State;
 
             return countryDto;
         }
@@ -68,6 +69,7 @@ namespace Business.Implements
             country.Capital = entity.Capital;
             country.Coin = entity.Coin;
             country.Official_language = entity.Official_language;
+            country.State = entity.State;
             return country;
         }
 
