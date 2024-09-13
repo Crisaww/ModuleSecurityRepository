@@ -76,7 +76,6 @@ namespace Business.Implements
                 CreateAt = DateTime.Now.AddHours(-5)
             };
             user = this.mapearDatos(user, entity);
-            //user.User = null;
             return await this.data.Save(user);
         }
 

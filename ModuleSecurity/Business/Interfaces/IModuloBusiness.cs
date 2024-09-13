@@ -6,16 +6,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data.Interfaces
+namespace Business.Interfaces
 {
-    public interface IModuleData
+    public interface IModuloBusiness
     {
-
         public Task Delete(int id);
-        public Task<Module> GetById(int id);
-        public Task<IEnumerable<Module>> GetAll();
-        public Task<Module> Save(Module Module);
-        public Task Update(Module Module);
+        public Task<ModuloDto> GetById(int id);
+        public Task<IEnumerable<ModuloDto>> GetAll();
         public Task<IEnumerable<DataSelectDto>> GetAllSelect();
+        public Task<Modulo> Save(ModuloDto entity);
+        public Task Update(ModuloDto entity);
     }
 }

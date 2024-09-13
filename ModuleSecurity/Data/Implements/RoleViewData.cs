@@ -86,10 +86,5 @@ namespace Data.Implements
             context.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             await context.SaveChangesAsync();
         }
-
-        Task<RoleView> IRoleViewData.Update(RoleView entity)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

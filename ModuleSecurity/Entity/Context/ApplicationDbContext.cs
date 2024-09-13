@@ -67,14 +67,13 @@ namespace Entity.Context
         }
 
         //Security
-        public DbSet<Model.Security.Module> Modules => Set<Model.Security.Module>();
+        public DbSet<Model.Security.Modulo> Modulos => Set<Model.Security.Modulo>();
         public DbSet<Person> Persons => Set<Person>();
         public DbSet<Role> Roles => Set<Role>();
         public DbSet<RoleView> RoleViews => Set<RoleView>();
         public DbSet<User> Users => Set<User>();
         public DbSet<UserRole> UserRoles => Set<UserRole>();
         public DbSet<View> Views => Set<View>();
-        public DbSet<Module> Modules => Set<Module>();
         public DbSet<Country> Countries => Set<Country>();
         public DbSet<City> Cities => Set<City>();
         public DbSet<State> States => Set<State>();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entity.Model.Security
 {
-    public class Module
+    public class Modulo
     {
         public int Id { get; set; }
         public string Description { get; set; }

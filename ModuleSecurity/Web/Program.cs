@@ -15,7 +15,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 //Configuración Data I.S
 builder.Services.AddScoped<ICityData, CityData>();
 builder.Services.AddScoped<ICountryData, CountryData>();
-builder.Services.AddScoped<IModuleData, ModuleData>();
+builder.Services.AddScoped<IModuloData, ModuloData>();
 builder.Services.AddScoped<IPersonData, PersonData>();
 builder.Services.AddScoped<IRoleData, RoleData>();
 builder.Services.AddScoped<IRoleViewData, RoleViewData>();
@@ -27,7 +27,7 @@ builder.Services.AddScoped<IViewData, ViewData>();
 //Configuración de Business I.S
 builder.Services.AddScoped<ICityBusiness, CityBusiness>();
 builder.Services.AddScoped<ICountryBusiness, CountryBusiness>();
-builder.Services.AddScoped<IModuleBusiness, ModuleBusiness>();
+builder.Services.AddScoped<IModuloBusiness, ModuloBusiness>();
 builder.Services.AddScoped<IPersonBusiness, PersonBusiness>();
 builder.Services.AddScoped<IRoleBusiness, RoleBusiness>();
 builder.Services.AddScoped<IRoleViewBusiness, RoleViewBusiness>();

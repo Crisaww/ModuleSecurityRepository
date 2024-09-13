@@ -11,24 +11,24 @@ namespace Web.Controllers.Implements
     {
         [ApiController]
         [Route("[controller]")]
-        public class ModuleController : ControllerBase, IModuleController
+        public class ModuloController : ControllerBase, IModuloController
         {
-            private readonly IModuleBusiness _moduleBusiness;
+            private readonly IModuloBusiness _moduleBusiness;
 
-            public ModuleController(IModuleBusiness moduleBusiness)
+            public ModuloController(IModuloBusiness moduleBusiness)
             {
                 _moduleBusiness = moduleBusiness;
             }
 
             [HttpGet]
-            public async Task<ActionResult<IEnumerable<ModuleDto>>> GetAll()
+            public async Task<ActionResult<IEnumerable<ModuloDto>>> GetAll()
             {
                 var result = await _moduleBusiness.GetAll();
                 return Ok(result);
             }
 
             [HttpGet("{id}")]
-            public async Task<ActionResult<ModuleDto>> GetById(int id)
+            public async Task<ActionResult<ModuloDto>> GetById(int id)
             {
                 var result = await _moduleBusiness.GetById(id);
                 if (result == null)
@@ -40,7 +40,7 @@ namespace Web.Controllers.Implements
             }
 
             [HttpPost]
-            public async Task<ActionResult<Module>> Save([FromBody] ModuleDto entity)
+            public async Task<ActionResult<Module>> Save([FromBody] ModuloDto entity)
             {
                 if (entity == null)
                 {
@@ -52,7 +52,7 @@ namespace Web.Controllers.Implements
             }
 
             [HttpPut("{id}")]
-            public async Task<IActionResult> Update([FromBody] ModuleDto entity)
+            public async Task<IActionResult> Update([FromBody] ModuloDto entity)
             {
                 if (entity == null || entity.Id == 0)
                 {
@@ -70,7 +70,7 @@ namespace Web.Controllers.Implements
                 return NoContent();
             }
 
-            Task<ActionResult<ModuleDto>> IModuleController.Save(ModuleDto ModuleDto)
+            Task<ActionResult<ModuloDto>> IModuloController.Save(ModuloDto ModuleDto)
             {
                 throw new NotImplementedException();
             }

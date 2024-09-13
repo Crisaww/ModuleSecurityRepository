@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entity.Model.Security;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace Entity.DTO
         public string Description { get; set; }
         public bool State { get; set; }
         public string Route { get; set; }
-        public string ModuleId { get; set; }
-        
+        public int ModuloId { get; set; }
+
     }
 }

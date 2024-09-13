@@ -28,7 +28,7 @@ namespace Business.Implements
                 Name = view.Name,
                 Description = view.Description,
                 Route = view.Route,
-                ModuleId = view.ModuleId,
+                ModuloId = view.ModuloId,
                 State = view.State
             });
 
@@ -50,7 +50,7 @@ namespace Business.Implements
             viewDto.Name = view.Name;
             viewDto.Description = view.Description;
             viewDto.Route = view.Route;
-            viewDto.ModuleId = view.ModuleId;
+            viewDto.ModuloId = view.ModuloId;
             viewDto.State = view.State;
             return viewDto;
         }
@@ -63,7 +63,7 @@ namespace Business.Implements
             view.Name = entity.Name;
             view.Description = entity.Description;
             view.Route = entity.Route;
-            view.ModuleId = entity.ModuleId; 
+            view.ModuloId = entity.ModuloId; 
             view.State = entity.State;
             return view;
         }

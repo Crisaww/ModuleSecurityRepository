@@ -218,16 +218,16 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Web.Controllers.Implements.Controller.Implementacion.ModuleController",
+    "ContainingType": "Web.Controllers.Implements.Controller.Implementacion.ModuloController",
     "Method": "GetAll",
-    "RelativePath": "Module",
+    "RelativePath": "Modulo",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Entity.DTO.ModuleDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Entity.DTO.ModuloDto, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -238,16 +238,16 @@
     ]
   },
   {
-    "ContainingType": "Web.Controllers.Implements.Controller.Implementacion.ModuleController",
+    "ContainingType": "Web.Controllers.Implements.Controller.Implementacion.ModuloController",
     "Method": "Save",
-    "RelativePath": "Module",
+    "RelativePath": "Modulo",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "entity",
-        "Type": "Entity.DTO.ModuleDto",
+        "Type": "Entity.DTO.ModuloDto",
         "IsRequired": true
       }
     ],
@@ -264,9 +264,9 @@
     ]
   },
   {
-    "ContainingType": "Web.Controllers.Implements.Controller.Implementacion.ModuleController",
+    "ContainingType": "Web.Controllers.Implements.Controller.Implementacion.ModuloController",
     "Method": "GetById",
-    "RelativePath": "Module/{id}",
+    "RelativePath": "Modulo/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -279,7 +279,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Entity.DTO.ModuleDto",
+        "Type": "Entity.DTO.ModuloDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -290,16 +290,16 @@
     ]
   },
   {
-    "ContainingType": "Web.Controllers.Implements.Controller.Implementacion.ModuleController",
+    "ContainingType": "Web.Controllers.Implements.Controller.Implementacion.ModuloController",
     "Method": "Update",
-    "RelativePath": "Module/{id}",
+    "RelativePath": "Modulo/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "entity",
-        "Type": "Entity.DTO.ModuleDto",
+        "Type": "Entity.DTO.ModuloDto",
         "IsRequired": true
       },
       {
@@ -311,9 +311,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Web.Controllers.Implements.Controller.Implementacion.ModuleController",
+    "ContainingType": "Web.Controllers.Implements.Controller.Implementacion.ModuloController",
     "Method": "Delete",
-    "RelativePath": "Module/{id}",
+    "RelativePath": "Modulo/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

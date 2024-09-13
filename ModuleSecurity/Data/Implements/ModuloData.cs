@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace Data.Implements
 {
-    public class ModuleData : IModuleData
+    public class ModuloData : IModuloData
     {
         private readonly ApplicationDbContext context;
         protected readonly IConfiguration configuration;
 
-        public ModuleData(ApplicationDbContext context, IConfiguration configuration)
+        public ModuloData(ApplicationDbContext context, IConfiguration configuration)
         {
             this.context = context;
             this.configuration = configuration;
@@ -33,7 +33,7 @@ namespace Data.Implements
 
             // Corregido: Asignación correcta de la propiedad DeleteAt
             entity.DeleteAt = DateTime.Today;
-            context.Modules.Update(entity);
+            context.Modulos.Update(entity);
             await context.SaveChangesAsync();
         }
 
@@ -44,7 +44,7 @@ namespace Data.Implements
                         Id, 
                         CONCAT(Description, ' - ', State) AS TextoMostrar 
                     FROM 
-                        modules 
+                        modulos 
                     WHERE 
                         DeleteAt IS NULL AND State = 1 
                     ORDER BY 
@@ -52,36 +52,36 @@ namespace Data.Implements
             return await context.QueryAsync<DataSelectDto>(sql);
         }
 
-        public async Task<IEnumerable<Module>> GetAll()
+        public async Task<IEnumerable<Modulo>> GetAll()
         {
             var sql = @"SELECT 
                         *
                     FROM 
-                        modules 
+                        modulos 
                     WHERE 
                         DeleteAt IS NULL AND State = 1 
                     ORDER BY 
                         Id ASC";
-            return await context.QueryAsync<Module>(sql);
+            return await context.QueryAsync<Modulo>(sql);
         }
 
         // Método para obtener un rol por su ID
-        public async Task<Module> GetById(int id)
+        public async Task<Modulo> GetById(int id)
         {
-            var sql = @"SELECT * FROM modules WHERE Id = @Id ORDER BY Id ASC";
-            return await this.context.QueryFirstOrDefaultAsync<Module>(sql, new { Id = id });
+            var sql = @"SELECT * FROM modulos WHERE Id = @Id ORDER BY Id ASC";
+            return await this.context.QueryFirstOrDefaultAsync<Modulo>(sql, new { Id = id });
         }
 
         // Método para guardar un nuevo rol
-        public async Task<Module> Save(Module entity)
+        public async Task<Modulo> Save(Modulo entity)
         {
-            context.Modules.Add(entity);
+            context.Modulos.Add(entity);
             await context.SaveChangesAsync();
             return entity;
         }
 
         // Método para actualizar un rol existente
-        public async Task Update(Module entity)
+        public async Task Update(Modulo entity)
         {
             context.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             await context.SaveChangesAsync();

@@ -1,4 +1,5 @@
-﻿using Data.Interfaces;
+﻿
+using Data.Interfaces;
 using Entity.Context;
 using Entity.DTO;
 using Entity.Model.Security;
@@ -42,9 +43,9 @@ namespace Data.Implements
         {
             var sql = @"SELECT 
                     Id, 
-                    CONCAT(Username, ' - ', Password, ' - ', State) AS TextoMostrar 
+                    CONCAT(Username, ' - ', Password, ' - ', PersonId, ' - ', State) AS TextoMostrar 
                 FROM 
-                    Users 
+                    users 
                 WHERE 
                     DeleteAt IS NULL AND State = 1 
                 ORDER BY 
@@ -57,7 +58,7 @@ namespace Data.Implements
             var sql = @"SELECT 
                     *
                 FROM 
-                    Users 
+                    users 
                 WHERE 
                     Deleted_at IS NULL AND State = 1 
                 ORDER BY 
@@ -68,7 +69,7 @@ namespace Data.Implements
         // Método para obtener un usuario por su ID
         public async Task<User> GetById(int id)
         {
-            var sql = @"SELECT * FROM Users WHERE Id = @Id ORDER BY Id ASC";
+            var sql = @"SELECT * FROM users WHERE Id = @Id ORDER BY Id ASC";
             return await this.context.QueryFirstOrDefaultAsync<User>(sql, new { Id = id });
         }
 
@@ -86,11 +87,6 @@ namespace Data.Implements
             context.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             await context.SaveChangesAsync();
 
-        }
-
-        Task<User> IUserData.Update(User entity)
-        {
-            throw new NotImplementedException();
         }
     }
 }

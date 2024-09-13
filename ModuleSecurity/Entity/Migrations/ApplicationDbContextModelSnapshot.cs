@@ -39,6 +39,9 @@ namespace Entity.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<int>("StateId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("UpdateAt")
                         .HasColumnType("datetime(6)");
 
@@ -46,6 +49,8 @@ namespace Entity.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("StateId");
 
                     b.ToTable("Cities");
                 });
@@ -90,7 +95,7 @@ namespace Entity.Migrations
                     b.ToTable("Countries");
                 });
 
-            modelBuilder.Entity("Entity.Model.Security.Module", b =>
+            modelBuilder.Entity("Entity.Model.Security.Modulo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -114,7 +119,7 @@ namespace Entity.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Modules");
+                    b.ToTable("Modulos");
                 });
 
             modelBuilder.Entity("Entity.Model.Security.Person", b =>
@@ -214,13 +219,8 @@ namespace Entity.Migrations
                     b.Property<DateTime?>("DeleteAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("RoleId")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
 
                     b.Property<bool>("State")
                         .HasColumnType("tinyint(1)");
@@ -228,15 +228,14 @@ namespace Entity.Migrations
                     b.Property<DateTime>("UpdateAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("View")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("ViewId")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<int>("ViewId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.HasIndex("ViewId");
 
                     b.ToTable("RoleViews");
                 });
@@ -289,13 +288,8 @@ namespace Entity.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Person")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("PersonId")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<int>("PersonId")
+                        .HasColumnType("int");
 
                     b.Property<bool>("State")
                         .HasColumnType("tinyint(1)");
@@ -308,6 +302,8 @@ namespace Entity.Migrations
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("PersonId");
 
                     b.ToTable("Users");
                 });
@@ -367,13 +363,8 @@ namespace Entity.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Module")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("ModuleId")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<int>("ModuloId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -391,7 +382,61 @@ namespace Entity.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ModuloId");
+
                     b.ToTable("Views");
+                });
+
+            modelBuilder.Entity("Entity.Model.Security.City", b =>
+                {
+                    b.HasOne("Entity.Model.Security.State", "State")
+                        .WithMany()
+                        .HasForeignKey("StateId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("State");
+                });
+
+            modelBuilder.Entity("Entity.Model.Security.RoleView", b =>
+                {
+                    b.HasOne("Entity.Model.Security.Role", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entity.Model.Security.View", "View")
+                        .WithMany()
+                        .HasForeignKey("ViewId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+
+                    b.Navigation("View");
+                });
+
+            modelBuilder.Entity("Entity.Model.Security.User", b =>
+                {
+                    b.HasOne("Entity.Model.Security.Person", "Person")
+                        .WithMany()
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Person");
+                });
+
+            modelBuilder.Entity("Entity.Model.Security.View", b =>
+                {
+                    b.HasOne("Entity.Model.Security.Modulo", "Modulo")
+                        .WithMany()
+                        .HasForeignKey("ModuloId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Modulo");
                 });
 #pragma warning restore 612, 618
         }

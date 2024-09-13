@@ -42,9 +42,9 @@ namespace Data.Implements
         {
             var sql = @"SELECT 
                 Id, 
-                CONCAT(Name, ' - ', Description) AS TextoMostrar 
+                CONCAT(Name, ' - ', Description, ' - ', State, ' - ', Route, ' - ', Description, ' - ', ModuloId) AS TextoMostrar 
             FROM 
-                View
+                views
             WHERE 
                 Deleted_at IS NULL AND State = 1 
             ORDER BY 
@@ -57,7 +57,7 @@ namespace Data.Implements
             var sql = @"SELECT 
                         *
                     FROM 
-                        View 
+                        views 
                     WHERE 
                         Deleted_at IS NULL AND State = 1 
                     ORDER BY 
@@ -68,7 +68,7 @@ namespace Data.Implements
         // Método para obtener un ViewRol por su ID
         public async Task<View> GetById(int id)
         {
-            var sql = @"SELECT * FROM View WHERE Id = @Id ORDER BY Id ASC";
+            var sql = @"SELECT * FROM views WHERE Id = @Id ORDER BY Id ASC";
             return await this.context.QueryFirstOrDefaultAsync<View>(sql, new { Id = id });
         }
 
@@ -85,11 +85,6 @@ namespace Data.Implements
         {
             context.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             await context.SaveChangesAsync();
-        }
-
-        Task<View> IViewData.Update(View entity)
-        {
-            throw new NotImplementedException();
         }
     }
 

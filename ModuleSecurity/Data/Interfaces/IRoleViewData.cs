@@ -8,8 +8,8 @@ namespace Data.Interfaces
         public Task Delete(int id);
         public Task<RoleView> GetById(int id);
         public Task<IEnumerable<RoleView>> GetAll();
-        public Task<RoleView> Save(RoleView entity);
-        public Task<RoleView> Update(RoleView entity);
+        public Task<RoleView> Save(RoleView RoleView);
+        public Task Update(RoleView RoleView);
         public Task<IEnumerable<DataSelectDto>> GetAllSelect();
     }
 }

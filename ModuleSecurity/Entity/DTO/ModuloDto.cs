@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entity.DTO
 {
-    public class ModuleDto
+    public class ModuloDto
     {
         public int Id { get; set; }
         public string Description { get; set; }
