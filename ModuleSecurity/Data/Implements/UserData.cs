@@ -53,17 +53,19 @@ namespace Data.Implements
             return await context.QueryAsync<DataSelectDto>(sql);
         }
 
-        public async Task<IEnumerable<User>> GetAll()
+        public async Task<IEnumerable<UserDto>> GetAll()
         {
-            var sql = @"SELECT 
-                    *
-                FROM 
-                    users 
-                WHERE 
-                    Deleted_at IS NULL AND State = 1 
-                ORDER BY 
-                    Id ASC";
-            return await context.QueryAsync<User>(sql);
+            var sql = @"SELECT
+                        	us.Id,
+	                        us.Username,
+                            us.Password,
+                            us.State,
+                            us.PersonId,
+                            per.first_name AS NamePerson
+
+                            FROM users AS us
+                            INNER JOIN persons AS per ON us.Id = us.PersonId";
+            return await context.QueryAsync<UserDto>(sql);
         }
 
         // Método para obtener un usuario por su ID

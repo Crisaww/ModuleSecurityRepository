@@ -10,24 +10,24 @@ namespace Web.Controllers.Implements
     [Route("[controller]")]
     public class DepartmentController : ControllerBase, IDepartmentController
     {
-        private readonly IStateBusiness _stateBusiness;
+        private readonly IDepartmentBusiness _departmentBusiness;
 
-        public DepartmentController(IStateBusiness stateBusiness)
+        public DepartmentController(IDepartmentBusiness stateBusiness)
         {
-            _stateBusiness = stateBusiness;
+            _departmentBusiness = stateBusiness;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<DepartmentDto>>> GetAll()
         {
-            var result = await _stateBusiness.GetAll();
+            var result = await _departmentBusiness.GetAll();
             return Ok(result);
         }
 
         [HttpGet("{id}")]
         public async Task<ActionResult<DepartmentDto>> GetById(int id)
         {
-            var result = await _stateBusiness.GetById(id);
+            var result = await _departmentBusiness.GetById(id);
             if (result == null)
             {
                 return NotFound();
@@ -44,7 +44,7 @@ namespace Web.Controllers.Implements
                 return BadRequest("Entity is null");
             }
 
-            var result = await _stateBusiness.Save(entity);
+            var result = await _departmentBusiness.Save(entity);
             return CreatedAtAction(nameof(GetById), new { id = result.Id }, result);
         }
 
@@ -56,14 +56,14 @@ namespace Web.Controllers.Implements
                 return BadRequest();
             }
 
-            await _stateBusiness.Update(entity);
+            await _departmentBusiness.Update(entity);
             return NoContent();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            await _stateBusiness.Delete(id);
+            await _departmentBusiness.Delete(id);
             return NoContent();
         }
 

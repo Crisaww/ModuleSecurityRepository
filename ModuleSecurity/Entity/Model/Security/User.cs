@@ -17,6 +17,5 @@ namespace Entity.Model.Security
         public bool State { get; set; }
         public int PersonId { get; set; }
         public Person Person { get; set; }
-        //public string Person{ get; set; }
     }
 }

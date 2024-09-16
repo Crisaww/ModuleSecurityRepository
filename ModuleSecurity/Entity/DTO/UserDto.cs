@@ -13,6 +13,7 @@ namespace Entity.DTO
         public string Username { get; set; }
         public string Password { get; set; }
         public bool State { get; set; }
+        public string ? Person { get; set; }
         public int PersonId { get; set; }
     }
 }

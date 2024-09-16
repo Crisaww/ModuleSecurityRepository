@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Entity.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240913180948_Initial")]
-    partial class Initial
+    [Migration("20240915223253_añadi_el_id_de_country_en_department")]
+    partial class añadi_el_id_de_country_en_department
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -90,6 +90,9 @@ namespace Entity.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<bool>("State")
+                        .HasColumnType("tinyint(1)");
+
                     b.Property<DateTime>("UpdateAt")
                         .HasColumnType("datetime(6)");
 
@@ -107,6 +110,9 @@ namespace Entity.Migrations
                     b.Property<string>("Capital")
                         .IsRequired()
                         .HasColumnType("longtext");
+
+                    b.Property<int>("CountryId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreateAt")
                         .HasColumnType("datetime(6)");
@@ -126,6 +132,8 @@ namespace Entity.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CountryId");
 
                     b.ToTable("Departments");
                 });
@@ -399,6 +407,17 @@ namespace Entity.Migrations
                         .IsRequired();
 
                     b.Navigation("Department");
+                });
+
+            modelBuilder.Entity("Entity.Model.Security.Department", b =>
+                {
+                    b.HasOne("Entity.Model.Security.Country", "Country")
+                        .WithMany()
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Country");
                 });
 
             modelBuilder.Entity("Entity.Model.Security.RoleView", b =>

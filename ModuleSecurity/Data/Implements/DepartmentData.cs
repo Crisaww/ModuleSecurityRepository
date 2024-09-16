@@ -42,7 +42,7 @@ namespace Data.Implements
         {
             var sql = @"SELECT 
                         Id, 
-                        CONCAT(Name, ' - ', Population, ' - ' Capital) AS TextoMostrar 
+                        CONCAT(Name, ' - ', Population, ' - ' Capital, ' - ' CountryId) AS TextoMostrar 
                     FROM 
                         departments 
                     WHERE 
@@ -52,17 +52,19 @@ namespace Data.Implements
             return await context.QueryAsync<DataSelectDto>(sql);
         }
 
-        public async Task<IEnumerable<Department>> GetAll()
+        public async Task<IEnumerable<DepartmentDto>> GetAll()
         {
-            var sql = @"SELECT 
-                        *
-                    FROM 
-                        departments 
-                    WHERE 
-                        DeleteAt IS NULL AND States = 1 
-                    ORDER BY 
-                        Id ASC";
-            return await context.QueryAsync<Department>(sql);
+            var sql = @"SELECT
+                        	depa.Id,
+	                        depa.Name,
+                            depa.population,
+                            depa.Capital,
+                            depa.CountryId,
+                            cou.Name AS Country
+
+                            FROM departments AS depa
+                            INNER JOIN countries AS cou ON cou.Id = depa.CountryId";
+            return await context.QueryAsync<DepartmentDto>(sql);
         }
 
         // Método para obtener un estado por su ID

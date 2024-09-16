@@ -28,7 +28,8 @@ namespace Entity.Migrations
                     Population = table.Column<string>(type: "longtext", nullable: false),
                     Capital = table.Column<string>(type: "longtext", nullable: false),
                     Coin = table.Column<string>(type: "longtext", nullable: false),
-                    Official_language = table.Column<string>(type: "longtext", nullable: false)
+                    Official_language = table.Column<string>(type: "longtext", nullable: false),
+                    State = table.Column<bool>(type: "tinyint(1)", nullable: false)
                 },
                 constraints: table =>
                 {

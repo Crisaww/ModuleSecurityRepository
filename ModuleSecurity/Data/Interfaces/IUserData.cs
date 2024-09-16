@@ -13,7 +13,7 @@ namespace Data.Interfaces
 
         public Task Delete(int id);
         public Task<User> GetById(int id);
-        public Task<IEnumerable<User>> GetAll();
+        public Task<IEnumerable<UserDto>> GetAll();
         public Task<User> Save(User User);
         public Task Update(User User);
         public Task<IEnumerable<DataSelectDto>> GetAllSelect();

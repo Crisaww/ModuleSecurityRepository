@@ -13,9 +13,9 @@ namespace Data.Interfaces
 
         public Task Delete(int id);
         public Task<Department> GetById(int id);
-        public Task<IEnumerable<Department>> GetAll();
-        public Task<Department> Save(Department State);
-        public Task Update(Department State);
+        public Task<IEnumerable<DepartmentDto>> GetAll();
+        public Task<Department> Save(Department Department);
+        public Task Update(Department Department);
         public Task<IEnumerable<DataSelectDto>> GetAllSelect();
     }
 }

@@ -12,5 +12,7 @@ namespace Entity.DTO
         public string Name { get; set; }
         public string Population { get; set; }
         public string Capital { get; set; }
+        public string ? Country { get; set; }
+        public int CountryId { get; set; }
     }
 }

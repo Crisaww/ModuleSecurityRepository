@@ -52,17 +52,17 @@ namespace Data.Implements
             return await context.QueryAsync<DataSelectDto>(sql);
         }
 
-        public async Task<IEnumerable<Person>> GetAll()
+        public async Task<IEnumerable<PersonDto>> GetAll()
         {
             var sql = @"SELECT 
                         *
                     FROM 
                         persons 
                     WHERE 
-                        Deleted_at IS NULL AND State = 1 
+                        DeleteAt IS NULL AND State = 1 
                     ORDER BY 
                         Id ASC";
-            return await context.QueryAsync<Person>(sql);
+            return await context.QueryAsync<PersonDto>(sql);
         }
 
         // Método para obtener un rol por su ID

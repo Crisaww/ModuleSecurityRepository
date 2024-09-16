@@ -27,17 +27,17 @@ namespace Business.Implements
 
         public async Task<IEnumerable<UserDto>> GetAll()
         {
-            IEnumerable<User> users = await this.data.GetAll();
-            var userDtos = users.Select(user => new UserDto
-            {
-                Id = user.Id,
-                Username = user.Username,
-                Password = user.Password,
-                PersonId = user.PersonId,
-                State = user.State
-            });
+            IEnumerable<UserDto> users = await this.data.GetAll();
+            //var userDtos = users.Select(user => new UserDto
+            //{
+            //    Id = user.Id,
+            //    Username = user.Username,
+            //    Password = user.Password,
+            //    PersonId = user.PersonId,
+            //    State = user.State
+            //});
 
-            return userDtos;
+            return users;
         }
 
         public async Task<IEnumerable<DataSelectDto>> GetAllSelect()

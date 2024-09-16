@@ -19,7 +19,7 @@
           <EntitySet Name="RoleSet" EntityType="DbModel.Role" />
           <EntitySet Name="RoleViewSet" EntityType="DbModel.RoleView" />
           <EntitySet Name="ViewSet" EntityType="DbModel.View" />
-          <EntitySet Name="ModuleSet" EntityType="DbModel.Module" />
+          <EntitySet Name="ModuloSet" EntityType="DbModel.Modulo" />
           <AssociationSet Name="UserRoleUser" Association="DbModel.UserRoleUser">
             <End Role="UserRole" EntitySet="UserRoleSet" />
             <End Role="User" EntitySet="UserSet" />
@@ -42,7 +42,7 @@
           </AssociationSet>
           <AssociationSet Name="ViewModule" Association="DbModel.ViewModule">
             <End Role="View" EntitySet="ViewSet" />
-            <End Role="Module" EntitySet="ModuleSet" />
+            <End Role="Module" EntitySet="ModuloSet" />
           </AssociationSet>
           <EntitySet Name="CitySet" EntityType="DbModel.City" />
           <EntitySet Name="CountrySet" EntityType="DbModel.Country" />
@@ -127,9 +127,9 @@
           <Property Name="UpdateAt" Type="DateTime" Nullable="false" />
           <Property Name="DeleteAt" Type="DateTime" Nullable="false" />
           <Property Name="State" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="Module_id" Relationship="DbModel.ViewModule" FromRole="View" ToRole="Module" />
+          <NavigationProperty Name="Modulo_id" Relationship="DbModel.ViewModule" FromRole="View" ToRole="Module" />
         </EntityType>
-        <EntityType Name="Module">
+        <EntityType Name="Modulo">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
@@ -162,7 +162,7 @@
         </Association>
         <Association Name="ViewModule">
           <End Type="DbModel.View" Role="View" Multiplicity="*" />
-          <End Type="DbModel.Module" Role="Module" Multiplicity="1" />
+          <End Type="DbModel.Modulo" Role="Module" Multiplicity="1" />
         </Association>
         <EntityType Name="City">
           <Key>

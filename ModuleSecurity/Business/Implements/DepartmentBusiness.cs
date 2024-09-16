@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Business.Implements
 {
-    public class DepartmentBusiness : IStateBusiness
+    public class DepartmentBusiness : IDepartmentBusiness
     {
         protected readonly IDepartmentData data;
 
@@ -26,16 +26,16 @@ namespace Business.Implements
 
         public async Task<IEnumerable<DepartmentDto>> GetAll()
         {
-            IEnumerable<Department> departments = await this.data.GetAll();
-            var departmentDtos = departments.Select(department => new DepartmentDto
-            {
-                Id = department.Id,
-                Name = department.Name,
-                Population = department.Population,
-                Capital = department.Capital
-            });
+            IEnumerable<DepartmentDto> departments = await this.data.GetAll();
+            //var departmentDtos = departments.Select(department => new DepartmentDto
+            //{
+            //    Id = department.Id,
+            //    Name = department.Name,
+            //    Population = department.Population,
+            //    Capital = department.Capital
+            //});
 
-            return departmentDtos;
+            return departments;
         }
 
         public async Task<IEnumerable<DataSelectDto>> GetAllSelect()
@@ -52,6 +52,7 @@ namespace Business.Implements
             departmentDto.Name = department.Name;
             departmentDto.Population = department.Population;
             departmentDto.Capital = department.Capital;
+            departmentDto.CountryId = department.CountryId;
 
             return departmentDto;
         }
@@ -62,6 +63,7 @@ namespace Business.Implements
             department.Name = entity.Name;
             department.Population = entity.Population;
             department.Capital = entity.Capital;
+            department.CountryId = entity.CountryId;
             return department;
         }
 

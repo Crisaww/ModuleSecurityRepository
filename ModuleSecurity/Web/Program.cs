@@ -31,7 +31,7 @@ builder.Services.AddScoped<IModuloBusiness, ModuloBusiness>();
 builder.Services.AddScoped<IPersonBusiness, PersonBusiness>();
 builder.Services.AddScoped<IRoleBusiness, RoleBusiness>();
 builder.Services.AddScoped<IRoleViewBusiness, RoleViewBusiness>();
-builder.Services.AddScoped<IStateBusiness, DepartmentBusiness>();
+builder.Services.AddScoped<IDepartmentBusiness, DepartmentBusiness>();
 builder.Services.AddScoped<IUserBusiness, UserBusiness>();
 builder.Services.AddScoped<IUserRoleBusiness, UserRoleBusiness>();
 builder.Services.AddScoped<IViewBusiness, ViewBusiness>();

@@ -17,5 +17,6 @@ namespace Entity.DTO
         public string Type_document { get; set; }
         public string Document { get; set; }
         public bool State { get; set; }
+       
     }
 }
