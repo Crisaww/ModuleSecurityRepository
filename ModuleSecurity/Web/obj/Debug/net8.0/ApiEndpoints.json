@@ -907,7 +907,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Entity.DTO.UserRoleDto",
+        "Type": "Entity.Model.Security.UserRole",
         "MediaTypes": [
           "text/plain",
           "application/json",
