@@ -12,9 +12,9 @@ namespace Data.Interfaces
     {
         public Task Delete(int id);
         public Task<UserRole> GetById(int id);
-        public Task<IEnumerable<UserRole>> GetAll();
-        public Task<UserRole> Save(UserRole entity);
-        public Task<UserRole> Update(UserRole entity);
+        public Task<IEnumerable<UserRoleDto>> GetAll();
+        public Task<UserRole> Save(UserRole UserRole);
+        public Task Update(UserRole UserRole);
         public Task<IEnumerable<DataSelectDto>> GetAllSelect();
     }
 }

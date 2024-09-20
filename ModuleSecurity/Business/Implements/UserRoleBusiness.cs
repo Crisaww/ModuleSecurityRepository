@@ -27,16 +27,16 @@ namespace Business.Implements
 
         public async Task<IEnumerable<UserRoleDto>> GetAll()
         {
-            IEnumerable<UserRole> userroles = await this.data.GetAll();
-            var userroleDtos = userroles.Select(userrole => new UserRoleDto
-            {
-                Id = userrole.Id,
-                RoleId = userrole.RoleId,
-                UserId = userrole.UserId,
-                State = userrole.State
-            });
+            IEnumerable<UserRoleDto> userroles = await this.data.GetAll();
+            //var userroleDtos = userroles.Select(userrole => new UserRoleDto
+            //{
+            //    Id = userrole.Id,
+            //    RoleId = userrole.RoleId,
+            //    UserId = userrole.UserId,
+            //    State = userrole.State
+            //});
 
-            return userroleDtos;
+            return userroles;
         }
 
         public async Task<IEnumerable<DataSelectDto>> GetAllSelect()

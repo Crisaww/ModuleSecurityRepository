@@ -14,11 +14,11 @@ namespace Entity.Model.Security
         public DateTime ? DeleteAt { get; set; }
         public bool State { get; set; }
 
-        public string RoleId { get; set; }
-        public string Role { get; set; }
+        public int RoleId { get; set; }
+        public Role Role { get; set; }
 
-        public string UserId { get; set; }
-        public string User { get; set; }
+        public int UserId { get; set; }
+        public User User { get; set; }
     }
 }
 

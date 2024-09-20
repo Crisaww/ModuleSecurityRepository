@@ -18,3 +18,4 @@ namespace Business.Interfaces
         public Task Update(UserDto entity);
     }
 }
+                                                            

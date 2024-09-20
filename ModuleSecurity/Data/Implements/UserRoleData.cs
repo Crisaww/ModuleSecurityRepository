@@ -42,9 +42,9 @@ namespace Data.Implements
         {
             var sql = @"SELECT 
                     Id, 
-                    CONCAT(Name, ' - ', Description) AS TextoMostrar 
+                    CONCAT(UserId, ' - ', RoleId, ' - ', State) AS TextoMostrar 
                 FROM 
-                    UserRol 
+                    userroles 
                 WHERE 
                     DeleteAt IS NULL AND State = 1 
                 ORDER BY 
@@ -52,23 +52,26 @@ namespace Data.Implements
             return await context.QueryAsync<DataSelectDto>(sql);
         }
 
-        public async Task<IEnumerable<UserRole>> GetAll()
+        public async Task<IEnumerable<UserRoleDto>> GetAll()
         {
-            var sql = @"SELECT 
-                    *
-                FROM 
-                    UserRole 
-                WHERE 
-                    Deleted_at IS NULL AND State = 1 
-                ORDER BY 
-                    Id ASC";
-            return await context.QueryAsync<UserRole>(sql);
+            var sql = @"SELECT
+                        	ur.Id,
+                            ur.UserId,
+                            ur.RoleId,
+                            us.Username AS NameUser,
+                            ro.Name AS NameRole
+
+                            FROM userroles AS ur
+
+                            INNER JOIN users AS us ON us.Id = ur.UserId
+                            INNER JOIN roles AS ro ON ro.Id = ur.RoleId";
+            return await context.QueryAsync<UserRoleDto>(sql);
         }
 
         // Método para obtener un UserRol por su ID
         public async Task<UserRole> GetById(int id)
         {
-            var sql = @"SELECT * FROM UserRol WHERE Id = @Id ORDER BY Id ASC";
+            var sql = @"SELECT * FROM userroles WHERE Id = @Id ORDER BY Id ASC";
             return await this.context.QueryFirstOrDefaultAsync<UserRole>(sql, new { Id = id });
         }
 
@@ -85,11 +88,6 @@ namespace Data.Implements
         {
             context.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             await context.SaveChangesAsync();
-        }
-
-        Task<UserRole> IUserRoleData.Update(UserRole entity)
-        {
-            throw new NotImplementedException();
         }
     }
 

@@ -64,7 +64,7 @@ namespace Data.Implements
                             per.first_name AS NamePerson
 
                             FROM users AS us
-                            INNER JOIN persons AS per ON us.Id = us.PersonId";
+                            INNER JOIN persons AS per ON per.Id = us.PersonId";
             return await context.QueryAsync<UserDto>(sql);
         }
 

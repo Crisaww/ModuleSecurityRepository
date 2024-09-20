@@ -62,9 +62,9 @@ namespace Business.Implements
         public User mapearDatos(User user, UserDto entity)
         {
             user.Id = entity.Id;
-            user.Username = user.Username;
-            user.Password = user.Password;
-            user.PersonId = user.PersonId;
+            user.Username = entity.Username;
+            user.Password = entity.Password;
+            user.PersonId = entity.PersonId;
             user.State = entity.State;
             return user;
         }
