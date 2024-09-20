@@ -5,7 +5,7 @@
 namespace Entity.Migrations
 {
     /// <inheritdoc />
-    public partial class acomode_un_signo_en_person : Migration
+    public partial class migracion_dos : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

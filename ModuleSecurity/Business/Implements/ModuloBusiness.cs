@@ -26,15 +26,15 @@ namespace Business.Implements
 
         public async Task<IEnumerable<ModuloDto>> GetAll()
         {
-            IEnumerable<Modulo> modulos = await this.data.GetAll();
-            var modulosDtos = modulos.Select(module => new ModuloDto
-            {
-                Id = module.Id,
-                Description = module.Description,
-                State = module.State
-            });
+            IEnumerable<ModuloDto> modulos = await this.data.GetAll();
+            //var modulosDtos = modulos.Select(module => new ModuloDto
+            //{
+            //    Id = module.Id,
+            //    Description = module.Description,
+            //    State = module.State
+            //});
 
-            return modulosDtos;
+            return modulos;
         }
 
         public async Task<IEnumerable<DataSelectDto>> GetAllSelect()

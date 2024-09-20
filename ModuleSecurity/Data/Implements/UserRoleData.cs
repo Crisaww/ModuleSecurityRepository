@@ -56,6 +56,7 @@ namespace Data.Implements
         {
             var sql = @"SELECT
                         	ur.Id,
+                            ur.State,
                             ur.UserId,
                             ur.RoleId,
                             us.Username AS NameUser,
@@ -64,7 +65,8 @@ namespace Data.Implements
                             FROM userroles AS ur
 
                             INNER JOIN users AS us ON us.Id = ur.UserId
-                            INNER JOIN roles AS ro ON ro.Id = ur.RoleId";
+                            INNER JOIN roles AS ro ON ro.Id = ur.RoleId
+                            WHERE ISNULL(ur.DeleteAt)";
             return await context.QueryAsync<UserRoleDto>(sql);
         }
 

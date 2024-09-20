@@ -42,27 +42,31 @@ namespace Data.Implements
         {
             var sql = @"SELECT 
                 Id, 
-                CONCAT(Name, ' - ', Description, ' - ', State, ' - ', Route, ' - ', Description, ' - ', ModuloId) AS TextoMostrar 
+                CONCAT(Name, ' - ', Description, ' - ', State, ' - ', Route, ' - ', ModuloId) AS TextoMostrar 
             FROM 
                 views
             WHERE 
-                Deleted_at IS NULL AND State = 1 
+                DeletedAt IS NULL AND State = 1 
             ORDER BY 
                 Id ASC";
             return await context.QueryAsync<DataSelectDto>(sql);
         }
 
-        public async Task<IEnumerable<View>> GetAll()
+        public async Task<IEnumerable<ViewDto>> GetAll()
         {
-            var sql = @"SELECT 
-                        *
-                    FROM 
-                        views 
-                    WHERE 
-                        Deleted_at IS NULL AND State = 1 
-                    ORDER BY 
-                        Id ASC";
-            return await context.QueryAsync<View>(sql);
+            var sql = @"SELECT
+			                vi.Id,
+			                vi.Name,
+			                vi.Description,
+			                vi.State,
+			                vi.Route,
+			                vi.ModuloId,
+			                mo.Description AS DescripModulo
+
+			                FROM views AS vi
+			                INNER JOIN modulos AS mo ON mo.Id = vi.ModuloId
+			                WHERE ISNULL(vi.DeleteAt)";
+            return await context.QueryAsync<ViewDto>(sql);
         }
 
         // Método para obtener un ViewRol por su ID

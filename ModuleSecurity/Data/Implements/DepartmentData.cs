@@ -63,7 +63,9 @@ namespace Data.Implements
                             cou.Name AS Country
 
                             FROM departments AS depa
-                            INNER JOIN countries AS cou ON cou.Id = depa.CountryId";
+                            INNER JOIN countries AS cou ON cou.Id = depa.CountryId
+                            WHERE ISNULL(depa.DeleteAt)";
+
             return await context.QueryAsync<DepartmentDto>(sql);
         }
 

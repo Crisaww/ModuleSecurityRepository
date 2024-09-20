@@ -1,8 +1,7 @@
 ﻿using Business.Interfaces;
 using Entity.DTO;
-using Microsoft.AspNetCore.Http.HttpResults;
+using Entity.Model.Security;
 using Microsoft.AspNetCore.Mvc;
-using System.Reflection;
 using Web.Controllers.Interfaces;
 
 namespace Web.Controllers.Implements
@@ -40,7 +39,7 @@ namespace Web.Controllers.Implements
             }
 
             [HttpPost]
-            public async Task<ActionResult<Module>> Save([FromBody] ModuloDto entity)
+            public async Task<ActionResult<Modulo>> Save([FromBody] ModuloDto entity)
             {
                 if (entity == null)
                 {

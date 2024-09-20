@@ -1,13 +1,7 @@
 ﻿using Business.Interfaces;
-using Data.Implements;
 using Data.Interfaces;
 using Entity.DTO;
 using Entity.Model.Security;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Business.Implements
 {
@@ -75,6 +69,7 @@ namespace Business.Implements
             {
                 CreateAt = DateTime.Now.AddHours(-5)
             };
+
             roleview = this.mapearDatos(roleview, entity);
             return await this.data.Save(roleview);
         }
@@ -82,10 +77,15 @@ namespace Business.Implements
         public async Task Update(RoleViewDto entity)
         {
             RoleView roleview = await this.data.GetById(entity.Id);
+
+            roleview.UpdateAt = DateTime.Now.AddHours(-5);
+
+
             if (roleview == null)
             {
                 throw new Exception("Registro no encontrado");
             }
+
             roleview = this.mapearDatos(roleview, entity);
             await this.data.Update(roleview);
         }

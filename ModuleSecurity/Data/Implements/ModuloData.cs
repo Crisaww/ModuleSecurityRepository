@@ -33,7 +33,7 @@ namespace Data.Implements
 
             // Corregido: Asignación correcta de la propiedad DeleteAt
             entity.DeleteAt = DateTime.Today;
-            context.Modulos.Update(entity);
+            context.Modulos.Remove(entity);
             await context.SaveChangesAsync();
         }
 
@@ -52,7 +52,7 @@ namespace Data.Implements
             return await context.QueryAsync<DataSelectDto>(sql);
         }
 
-        public async Task<IEnumerable<Modulo>> GetAll()
+        public async Task<IEnumerable<ModuloDto>> GetAll()
         {
             var sql = @"SELECT 
                         *
@@ -62,7 +62,7 @@ namespace Data.Implements
                         DeleteAt IS NULL AND State = 1 
                     ORDER BY 
                         Id ASC";
-            return await context.QueryAsync<Modulo>(sql);
+            return await context.QueryAsync<ModuloDto>(sql);
         }
 
         // Método para obtener un rol por su ID

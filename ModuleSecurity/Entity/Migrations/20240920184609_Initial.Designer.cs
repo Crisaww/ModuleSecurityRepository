@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Entity.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240915223253_añadi_el_id_de_country_en_department")]
-    partial class añadi_el_id_de_country_en_department
+    [Migration("20240920184609_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -331,13 +331,8 @@ namespace Entity.Migrations
                     b.Property<DateTime?>("DeleteAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("RoleId")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
 
                     b.Property<bool>("State")
                         .HasColumnType("tinyint(1)");
@@ -345,15 +340,14 @@ namespace Entity.Migrations
                     b.Property<DateTime>("UpdateAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<string>("User")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("longtext");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("UserRoles");
                 });
@@ -448,6 +442,25 @@ namespace Entity.Migrations
                         .IsRequired();
 
                     b.Navigation("Person");
+                });
+
+            modelBuilder.Entity("Entity.Model.Security.UserRole", b =>
+                {
+                    b.HasOne("Entity.Model.Security.Role", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Entity.Model.Security.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Entity.Model.Security.View", b =>

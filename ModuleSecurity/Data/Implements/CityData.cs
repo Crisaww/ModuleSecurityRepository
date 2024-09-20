@@ -57,7 +57,8 @@ namespace Data.Implements
                             de.Name AS Department
 
                             FROM cities AS ci
-                            INNER JOIN departments AS de ON de.Id = ci.DepartmentId";
+                            INNER JOIN departments AS de ON de.Id = ci.DepartmentId
+                            WHERE ISNULL(ci.DeleteAt)";
             return await context.QueryAsync<CityDto>(sql);
         }
 
