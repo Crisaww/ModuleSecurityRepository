@@ -80,6 +80,7 @@ namespace Business.Implements
         public async Task Update(ModuloDto entity)
         {
             Modulo modulo = await this.data.GetById(entity.Id);
+            modulo.UpdateAt = DateTime.Now.AddHours(-5);
             if (modulo == null)
             {
                 throw new Exception("Registro no encontrado");

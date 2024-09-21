@@ -81,6 +81,7 @@ namespace Business.Implements
         public async Task Update(CityDto entity)
         {
             City city = await this.data.GetById(entity.Id);
+            city.UpdateAt = DateTime.Now.AddHours(-5);
             if (city == null)
             {
                 throw new Exception("Registro no encontrado");

@@ -11,6 +11,7 @@ namespace Business.Interfaces
     public interface ICountryBusiness
     {
         public Task Delete(int id);
+        public Task LogicalDelete(int id);
         public Task<CountryDto> GetById(int id);
         public Task<IEnumerable<CountryDto>> GetAll();
         public Task<IEnumerable<DataSelectDto>> GetAllSelect();

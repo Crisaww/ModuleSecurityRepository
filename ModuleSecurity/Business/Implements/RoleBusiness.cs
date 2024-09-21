@@ -79,6 +79,7 @@ namespace Business.Implements
         public async Task Update(RoleDto entity)
         {
             Role role = await this.data.GetById(entity.Id);
+            role.UpdateAt = DateTime.Now.AddHours(-5);
             if (role == null)
             {
                 throw new Exception("Registro no encontrado");

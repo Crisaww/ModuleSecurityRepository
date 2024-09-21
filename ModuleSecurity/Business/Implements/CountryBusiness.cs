@@ -1,4 +1,5 @@
 ﻿using Business.Interfaces;
+using Data.Implements;
 using Data.Interfaces;
 using Entity.DTO;
 using Entity.Model.Security;
@@ -23,6 +24,12 @@ namespace Business.Implements
         {
             await this.data.Delete(id);
         }
+
+        public async Task LogicalDelete(int id)
+        {
+            await this.data.LogicalDelete(id);
+        }
+
 
         public async Task<IEnumerable<CountryDto>> GetAll()
         {
@@ -86,6 +93,7 @@ namespace Business.Implements
         public async Task Update(CountryDto entity)
         {
             Country country = await this.data.GetById(entity.Id);
+            country.UpdateAt = DateTime.Now.AddHours(-5);
             if (country == null)
             {
                 throw new Exception("Registro no encontrado");

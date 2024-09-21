@@ -52,7 +52,7 @@ namespace Entity.Migrations
 
                     b.HasIndex("DepartmentId");
 
-                    b.ToTable("Cities");
+                    b.ToTable("Cities", (string)null);
                 });
 
             modelBuilder.Entity("Entity.Model.Security.Country", b =>
@@ -95,7 +95,7 @@ namespace Entity.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Countries");
+                    b.ToTable("Countries", (string)null);
                 });
 
             modelBuilder.Entity("Entity.Model.Security.Department", b =>
@@ -132,7 +132,7 @@ namespace Entity.Migrations
 
                     b.HasIndex("CountryId");
 
-                    b.ToTable("Departments");
+                    b.ToTable("Departments", (string)null);
                 });
 
             modelBuilder.Entity("Entity.Model.Security.Modulo", b =>
@@ -159,7 +159,7 @@ namespace Entity.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Modulos");
+                    b.ToTable("Modulos", (string)null);
                 });
 
             modelBuilder.Entity("Entity.Model.Security.Person", b =>
@@ -213,7 +213,7 @@ namespace Entity.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Persons");
+                    b.ToTable("Persons", (string)null);
                 });
 
             modelBuilder.Entity("Entity.Model.Security.Role", b =>
@@ -244,7 +244,7 @@ namespace Entity.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Roles");
+                    b.ToTable("Roles", (string)null);
                 });
 
             modelBuilder.Entity("Entity.Model.Security.RoleView", b =>
@@ -277,7 +277,7 @@ namespace Entity.Migrations
 
                     b.HasIndex("ViewId");
 
-                    b.ToTable("RoleViews");
+                    b.ToTable("RoleViews", (string)null);
                 });
 
             modelBuilder.Entity("Entity.Model.Security.User", b =>
@@ -313,7 +313,7 @@ namespace Entity.Migrations
 
                     b.HasIndex("PersonId");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("Entity.Model.Security.UserRole", b =>
@@ -346,7 +346,7 @@ namespace Entity.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserRoles");
+                    b.ToTable("UserRoles", (string)null);
                 });
 
             modelBuilder.Entity("Entity.Model.Security.View", b =>
@@ -386,7 +386,7 @@ namespace Entity.Migrations
 
                     b.HasIndex("ModuloId");
 
-                    b.ToTable("Views");
+                    b.ToTable("Views", (string)null);
                 });
 
             modelBuilder.Entity("Entity.Model.Security.City", b =>

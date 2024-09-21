@@ -218,6 +218,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Web.Controllers.Implements.CountryController",
+    "Method": "LogicalDelete",
+    "RelativePath": "Country/logical/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web.Controllers.Implements.DepartmentController",
     "Method": "GetAll",
     "RelativePath": "Department",
@@ -362,7 +378,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Reflection.Module",
+        "Type": "Entity.Model.Security.Modulo",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -907,7 +923,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Entity.Model.Security.UserRole",
+        "Type": "Entity.DTO.UserRoleDto",
         "MediaTypes": [
           "text/plain",
           "application/json",

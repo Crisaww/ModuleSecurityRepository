@@ -82,6 +82,7 @@ namespace Business.Implements
         public async Task Update(ViewDto entity)
         {
             View view = await this.data.GetById(entity.Id);
+            view.UpdateAt = DateTime.Now.AddHours(-5);
             if (view == null)
             {
                 throw new Exception("Registro no encontrado");

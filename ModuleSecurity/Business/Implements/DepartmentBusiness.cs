@@ -80,6 +80,7 @@ namespace Business.Implements
         public async Task Update(DepartmentDto entity)
         {
             Department department = await this.data.GetById(entity.Id);
+            department.UpdateAt = DateTime.Now.AddHours(-5);
             if (department == null)
             {
                 throw new Exception("Registro no encontrado");

@@ -38,6 +38,18 @@ namespace Data.Implements
             await context.SaveChangesAsync();
         }
 
+        public async Task LogicalDelete(int id)
+        {
+            var entity = await GetById(id);
+            if (entity == null)
+            {
+                throw new Exception("Registro NO encontrado");
+            }
+            entity.DeleteAt = DateTime.Now;
+            await context.SaveChangesAsync();
+        }
+
+
         // Método para obtener todosa los roles con un formato específico
         public async Task<IEnumerable<DataSelectDto>> GetAllSelect()
         {

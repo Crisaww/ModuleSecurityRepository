@@ -67,6 +67,14 @@ namespace Web.Controllers.Implements
             return NoContent();
         }
 
+        [HttpDelete("logical/{id}")]
+        public async Task<IActionResult> LogicalDelete(int id)
+        {
+                await _countryBusiness.LogicalDelete(id);
+                return NoContent(); // Retorna 204 No Content si la operación es exitosa 
+        }
+
+
         Task<ActionResult<CountryDto>> ICountryController.Save(CountryDto CountryDto)
         {
             throw new NotImplementedException();
