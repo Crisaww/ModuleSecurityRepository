@@ -1,4 +1,5 @@
-﻿using Business.Interfaces;
+﻿using Business.Implements;
+using Business.Interfaces;
 using Entity.DTO;
 using Entity.Model.Security;
 using Microsoft.AspNetCore.Mvc;
@@ -65,6 +66,13 @@ namespace Web.Controllers.Implements
         public async Task<IActionResult> Delete(int id)
         {
             await _userBusiness.Delete(id);
+            return NoContent();
+        }
+
+        [HttpDelete("logical/{id}")]
+        public async Task<IActionResult> LogicalDelete(int id)
+        {
+            await _userBusiness.LogicalDelete(id);
             return NoContent();
         }
 

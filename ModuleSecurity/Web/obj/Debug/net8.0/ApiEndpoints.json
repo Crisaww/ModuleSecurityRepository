@@ -109,6 +109,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Web.Controllers.Implements.CityController",
+    "Method": "LogicalDelete",
+    "RelativePath": "City/logical/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web.Controllers.Implements.CountryController",
     "Method": "GetAll",
     "RelativePath": "Country",
@@ -343,6 +359,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Web.Controllers.Implements.DepartmentController",
+    "Method": "LogicalDelete",
+    "RelativePath": "Department/logical/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web.Controllers.Implements.Controller.Implementacion.ModuloController",
     "Method": "GetAll",
     "RelativePath": "Modulo",
@@ -439,6 +471,22 @@
     "ContainingType": "Web.Controllers.Implements.Controller.Implementacion.ModuloController",
     "Method": "Delete",
     "RelativePath": "Modulo/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.Implements.Controller.Implementacion.ModuloController",
+    "Method": "LogicalDelete",
+    "RelativePath": "Modulo/logical/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -561,6 +609,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Web.Controllers.Implements.PersonController",
+    "Method": "LogicalDelete",
+    "RelativePath": "Person/logical/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web.Controllers.Implements.RoleController",
     "Method": "GetAll",
     "RelativePath": "Role",
@@ -657,6 +721,22 @@
     "ContainingType": "Web.Controllers.Implements.RoleController",
     "Method": "Delete",
     "RelativePath": "Role/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.Implements.RoleController",
+    "Method": "LogicalDelete",
+    "RelativePath": "Role/logical/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -779,6 +859,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Web.Controllers.Implements.RoleViewController",
+    "Method": "LogicalDelete",
+    "RelativePath": "RoleView/logical/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web.Controllers.Implements.UserController",
     "Method": "GetAll",
     "RelativePath": "User",
@@ -875,6 +971,22 @@
     "ContainingType": "Web.Controllers.Implements.UserController",
     "Method": "Delete",
     "RelativePath": "User/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.Implements.UserController",
+    "Method": "LogicalDelete",
+    "RelativePath": "User/logical/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -997,6 +1109,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Web.Controllers.Implements.UserRoleController",
+    "Method": "LogicalDelete",
+    "RelativePath": "UserRole/logical/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Web.Controllers.Implements.ViewController",
     "Method": "GetAll",
     "RelativePath": "View",
@@ -1093,6 +1221,22 @@
     "ContainingType": "Web.Controllers.Implements.ViewController",
     "Method": "Delete",
     "RelativePath": "View/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controllers.Implements.ViewController",
+    "Method": "LogicalDelete",
+    "RelativePath": "View/logical/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

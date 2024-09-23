@@ -11,6 +11,7 @@ namespace Business.Interfaces
     public interface IRoleBusiness
     {
         public Task Delete(int id);
+        public Task LogicalDelete(int id);
         public Task<RoleDto> GetById(int id);
         public Task<IEnumerable<RoleDto>> GetAll();
         public Task<IEnumerable<DataSelectDto>> GetAllSelect();

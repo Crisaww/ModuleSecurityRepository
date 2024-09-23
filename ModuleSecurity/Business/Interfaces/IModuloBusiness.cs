@@ -11,6 +11,7 @@ namespace Business.Interfaces
     public interface IModuloBusiness
     {
         public Task Delete(int id);
+        public Task LogicalDelete(int id);
         public Task<ModuloDto> GetById(int id);
         public Task<IEnumerable<ModuloDto>> GetAll();
         public Task<IEnumerable<DataSelectDto>> GetAllSelect();

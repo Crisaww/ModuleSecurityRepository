@@ -46,6 +46,7 @@ namespace Data.Implements
                 throw new Exception("Registro NO encontrado");
             }
             entity.DeleteAt = DateTime.Now;
+            context.Countries.Update(entity);
             await context.SaveChangesAsync();
         }
 

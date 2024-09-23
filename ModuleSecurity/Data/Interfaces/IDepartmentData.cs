@@ -12,6 +12,7 @@ namespace Data.Interfaces
     {
 
         public Task Delete(int id);
+        public Task LogicalDelete(int id);
         public Task<Department> GetById(int id);
         public Task<IEnumerable<DepartmentDto>> GetAll();
         public Task<Department> Save(Department Department);

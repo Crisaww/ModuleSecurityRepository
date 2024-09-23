@@ -17,8 +17,23 @@ namespace Data.Implements
             this.configuration = configuration;
         }
 
-        // Método para eliminar un registro de City
+        // Método para eliminar un registro de Role
         public async Task Delete(int Id)
+        {
+            var entity = await GetById(Id);
+            if (entity == null)
+            {
+                throw new Exception("Registro NO encontrado");
+            }
+
+            // Corregido: Asignación correcta de la propiedad DeleteAt
+            entity.DeleteAt = DateTime.Today;
+            context.Cities.Remove(entity);
+            await context.SaveChangesAsync();
+        }
+
+        // Método para eliminar un registro de City
+        public async Task LogicalDelete(int Id)
         {
             var entity = await GetById(Id);
             if (entity == null)

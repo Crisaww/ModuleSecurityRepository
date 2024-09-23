@@ -22,8 +22,22 @@ namespace Data.Implements
             this.configuration = configuration;
         }
 
-        // Método para eliminar un registro de Role
         public async Task Delete(int Id)
+        {
+            var entity = await GetById(Id);
+            if (entity == null)
+            {
+                throw new Exception("Registro NO encontrado");
+            }
+
+            // Corregido: Asignación correcta de la propiedad DeleteAt
+            entity.DeleteAt = DateTime.Today;
+            context.Persons.Remove(entity);
+            await context.SaveChangesAsync();
+        }
+
+        // Método para eliminar un registro de ViewRol
+        public async Task LogicalDelete(int Id)
         {
             var entity = await GetById(Id);
             if (entity == null)

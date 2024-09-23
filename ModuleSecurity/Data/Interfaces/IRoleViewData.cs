@@ -6,6 +6,7 @@ namespace Data.Interfaces
     public interface IRoleViewData
     {
         public Task Delete(int id);
+        public Task LogicalDelete(int id);
         public Task<RoleView> GetById(int id);
         public Task<IEnumerable<RoleView>> GetAll();
         public Task<RoleView> Save(RoleView RoleView);

@@ -67,6 +67,13 @@ namespace Web.Controllers.Implements
             return NoContent();
         }
 
+
+        [HttpDelete("logical/{id}")]
+        public async Task<IActionResult> LogicalDelete(int id)
+        {
+            await _cityBusiness.LogicalDelete(id);
+            return NoContent();
+        }
         Task<ActionResult<CityDto>> ICityController.Save(CityDto CityDto)
         {
             throw new NotImplementedException();

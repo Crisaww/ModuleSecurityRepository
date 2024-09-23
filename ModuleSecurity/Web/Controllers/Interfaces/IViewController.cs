@@ -10,5 +10,6 @@ namespace Web.Controllers.Interfaces
         public Task<ActionResult<ViewDto>> Save([FromBody] ViewDto ViewDto);
         public Task<IActionResult> Update([FromBody] ViewDto ViewDto);
         public Task<IActionResult> Delete(int id);
+        public Task<IActionResult> LogicalDelete(int id);
     }
 }

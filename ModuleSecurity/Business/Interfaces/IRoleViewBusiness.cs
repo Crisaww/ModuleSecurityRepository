@@ -12,6 +12,7 @@ namespace Business.Interfaces
     {
 
         public Task Delete(int id);
+        public Task LogicalDelete(int id);
         public Task<RoleViewDto> GetById(int id);
         public Task<IEnumerable<RoleViewDto>> GetAll();
         public Task<IEnumerable<DataSelectDto>> GetAllSelect();

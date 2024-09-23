@@ -12,6 +12,7 @@ namespace Data.Interfaces
     public interface IRoleData
     {
         public Task Delete(int id);
+        public Task LogicalDelete(int id);
         public Task<Role> GetById(int id);
 
         Task<IEnumerable<Role>> GetAll();

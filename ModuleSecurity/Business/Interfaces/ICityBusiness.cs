@@ -11,6 +11,7 @@ namespace Business.Interfaces
     public interface ICityBusiness
     {
         public Task Delete(int id);
+        public Task LogicalDelete(int id);
         public Task<CityDto> GetById(int id);
         public Task<IEnumerable<CityDto>> GetAll();
         public Task<IEnumerable<DataSelectDto>> GetAllSelect();

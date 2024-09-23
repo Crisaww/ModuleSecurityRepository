@@ -10,5 +10,6 @@ namespace Web.Controllers.Interfaces
         public Task<ActionResult<ModuloDto>> Save([FromBody] ModuloDto ModuleDto);
         public Task<IActionResult> Update([FromBody] ModuloDto ModuleDto);
         public Task<IActionResult> Delete(int id);
+        public Task<IActionResult> LogicalDelete(int id);
     }
 }

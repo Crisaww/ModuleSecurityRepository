@@ -37,6 +37,21 @@ namespace Data.Implements
             await context.SaveChangesAsync();
         }
 
+        // Método para eliminar un registro de ViewRol
+        public async Task LogicalDelete(int Id)
+        {
+            var entity = await GetById(Id);
+            if (entity == null)
+            {
+                throw new Exception("Registro NO encontrado");
+            }
+
+            // Corregido: Asignación correcta de la propiedad DeleteAt
+            entity.DeleteAt = DateTime.Today;
+            context.Modulos.Update(entity);
+            await context.SaveChangesAsync();
+        }
+
         // Método para obtener todos los roles con un formato específico
         public async Task<IEnumerable<DataSelectDto>> GetAllSelect()
         {

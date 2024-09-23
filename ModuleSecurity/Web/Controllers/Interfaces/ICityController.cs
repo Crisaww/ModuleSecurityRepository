@@ -9,5 +9,6 @@ namespace Web.Controllers.Interfaces
         public Task<ActionResult<CityDto>> Save([FromBody] CityDto CityDto);
         public Task<IActionResult> Update([FromBody] CityDto CityDto);
         public Task<IActionResult> Delete(int id);
+        public Task<IActionResult> LogicalDelete(int id);
     }
 }

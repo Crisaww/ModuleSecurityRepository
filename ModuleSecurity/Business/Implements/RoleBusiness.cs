@@ -24,6 +24,11 @@ namespace Business.Implements
             await this.data.Delete(id);
         }
 
+        public async Task LogicalDelete(int id)
+        {
+            await this.data.LogicalDelete(id);
+        }
+
         public async Task<IEnumerable<RoleDto>> GetAll()
         {
             IEnumerable<Role> roles = await this.data.GetAll();
