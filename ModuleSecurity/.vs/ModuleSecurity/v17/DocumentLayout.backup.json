@@ -1,12 +1,223 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DF962152-DA32-43ED-A050-69E3652C71ED}|Business\\Business.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\business\\implements\\personbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF962152-DA32-43ED-A050-69E3652C71ED}|Business\\Business.csproj|solutionrelative:business\\implements\\personbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B08E3291-A714-4E9F-963E-8AD9254BFE23}|Data\\Data.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\data\\implements\\persondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B08E3291-A714-4E9F-963E-8AD9254BFE23}|Data\\Data.csproj|solutionrelative:data\\implements\\persondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\entity\\dto\\persondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|solutionrelative:entity\\dto\\persondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B08E3291-A714-4E9F-963E-8AD9254BFE23}|Data\\Data.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\data\\implements\\citydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B08E3291-A714-4E9F-963E-8AD9254BFE23}|Data\\Data.csproj|solutionrelative:data\\implements\\citydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\entity\\model\\security\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|solutionrelative:entity\\model\\security\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\entity\\dto\\citydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|solutionrelative:entity\\dto\\citydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B08E3291-A714-4E9F-963E-8AD9254BFE23}|Data\\Data.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\data\\implements\\departmentdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B08E3291-A714-4E9F-963E-8AD9254BFE23}|Data\\Data.csproj|solutionrelative:data\\implements\\departmentdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\entity\\model\\security\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|solutionrelative:entity\\model\\security\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BE51C88-FD4B-4B0C-9715-51E042DD98F8}|Diagram\\Diagram.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\diagram\\dbmodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{2BE51C88-FD4B-4B0C-9715-51E042DD98F8}|Diagram\\Diagram.csproj|solutionrelative:diagram\\dbmodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\entity\\model\\security\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31A61067-B7B7-426A-BCF3-7AB732E7B3C3}|Entity\\Entity.csproj|solutionrelative:entity\\model\\security\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B08E3291-A714-4E9F-963E-8AD9254BFE23}|Data\\Data.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\data\\implements\\countrydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B08E3291-A714-4E9F-963E-8AD9254BFE23}|Data\\Data.csproj|solutionrelative:data\\implements\\countrydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF962152-DA32-43ED-A050-69E3652C71ED}|Business\\Business.csproj|c:\\users\\user\\documents\\adso-2024\\modulodeseguridadcisharp\\modulesecurityrepository\\modulesecurity\\business\\implements\\citybusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF962152-DA32-43ED-A050-69E3652C71ED}|Business\\Business.csproj|solutionrelative:business\\implements\\citybusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PersonBusiness.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Business\\Implements\\PersonBusiness.cs",
+              "RelativeDocumentMoniker": "Business\\Implements\\PersonBusiness.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Business\\Implements\\PersonBusiness.cs",
+              "RelativeToolTip": "Business\\Implements\\PersonBusiness.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAmwFkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T03:32:14.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PersonData.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Data\\Implements\\PersonData.cs",
+              "RelativeDocumentMoniker": "Data\\Implements\\PersonData.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Data\\Implements\\PersonData.cs",
+              "RelativeToolTip": "Data\\Implements\\PersonData.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAwEsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T02:00:25.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PersonDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\DTO\\PersonDto.cs",
+              "RelativeDocumentMoniker": "Entity\\DTO\\PersonDto.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\DTO\\PersonDto.cs",
+              "RelativeToolTip": "Entity\\DTO\\PersonDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T02:00:07.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CityDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\DTO\\CityDto.cs",
+              "RelativeDocumentMoniker": "Entity\\DTO\\CityDto.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\DTO\\CityDto.cs",
+              "RelativeToolTip": "Entity\\DTO\\CityDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T01:59:50.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CityData.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Data\\Implements\\CityData.cs",
+              "RelativeDocumentMoniker": "Data\\Implements\\CityData.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Data\\Implements\\CityData.cs",
+              "RelativeToolTip": "Data\\Implements\\CityData.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAA0wEIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T00:48:55.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Model\\Security\\Person.cs",
+              "RelativeDocumentMoniker": "Entity\\Model\\Security\\Person.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Model\\Security\\Person.cs",
+              "RelativeToolTip": "Entity\\Model\\Security\\Person.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAuwBYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T01:59:07.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "City.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Model\\Security\\City.cs",
+              "RelativeDocumentMoniker": "Entity\\Model\\Security\\City.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Model\\Security\\City.cs",
+              "RelativeToolTip": "Entity\\Model\\Security\\City.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAIwBAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T01:56:21.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Model\\Security\\Department.cs",
+              "RelativeDocumentMoniker": "Entity\\Model\\Security\\Department.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Entity\\Model\\Security\\Department.cs",
+              "RelativeToolTip": "Entity\\Model\\Security\\Department.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T01:23:51.958Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DepartmentData.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Data\\Implements\\DepartmentData.cs",
+              "RelativeDocumentMoniker": "Data\\Implements\\DepartmentData.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Data\\Implements\\DepartmentData.cs",
+              "RelativeToolTip": "Data\\Implements\\DepartmentData.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T00:48:48.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CountryData.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Data\\Implements\\CountryData.cs",
+              "RelativeDocumentMoniker": "Data\\Implements\\CountryData.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Data\\Implements\\CountryData.cs",
+              "RelativeToolTip": "Data\\Implements\\CountryData.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T00:48:52.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CityBusiness.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Business\\Implements\\CityBusiness.cs",
+              "RelativeDocumentMoniker": "Business\\Implements\\CityBusiness.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Business\\Implements\\CityBusiness.cs",
+              "RelativeToolTip": "Business\\Implements\\CityBusiness.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T00:48:33.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DbModel.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Diagram\\DbModel.edmx",
+              "RelativeDocumentMoniker": "Diagram\\DbModel.edmx",
+              "ToolTip": "C:\\Users\\USER\\Documents\\ADSO-2024\\ModuloDeSeguridadCiSharp\\ModuleSecurityRepository\\ModuleSecurity\\Diagram\\DbModel.edmx [Diagram1]",
+              "RelativeToolTip": "Diagram\\DbModel.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-09-26T00:30:08.487Z",
+              "EditorCaption": " [Diagram1]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

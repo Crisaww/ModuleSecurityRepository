@@ -52,7 +52,7 @@ namespace Entity.Migrations
 
                     b.HasIndex("DepartmentId");
 
-                    b.ToTable("Cities", (string)null);
+                    b.ToTable("Cities");
                 });
 
             modelBuilder.Entity("Entity.Model.Security.Country", b =>
@@ -95,7 +95,7 @@ namespace Entity.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Countries", (string)null);
+                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("Entity.Model.Security.Department", b =>
@@ -132,7 +132,7 @@ namespace Entity.Migrations
 
                     b.HasIndex("CountryId");
 
-                    b.ToTable("Departments", (string)null);
+                    b.ToTable("Departments");
                 });
 
             modelBuilder.Entity("Entity.Model.Security.Modulo", b =>
@@ -159,7 +159,7 @@ namespace Entity.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Modulos", (string)null);
+                    b.ToTable("Modulos");
                 });
 
             modelBuilder.Entity("Entity.Model.Security.Person", b =>
@@ -174,6 +174,9 @@ namespace Entity.Migrations
 
                     b.Property<DateTime>("Birth_of_date")
                         .HasColumnType("datetime(6)");
+
+                    b.Property<int>("CityId")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreateAt")
                         .HasColumnType("datetime(6)");
@@ -213,7 +216,9 @@ namespace Entity.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Persons", (string)null);
+                    b.HasIndex("CityId");
+
+                    b.ToTable("Persons");
                 });
 
             modelBuilder.Entity("Entity.Model.Security.Role", b =>
@@ -244,7 +249,7 @@ namespace Entity.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Roles", (string)null);
+                    b.ToTable("Roles");
                 });
 
             modelBuilder.Entity("Entity.Model.Security.RoleView", b =>
@@ -277,7 +282,7 @@ namespace Entity.Migrations
 
                     b.HasIndex("ViewId");
 
-                    b.ToTable("RoleViews", (string)null);
+                    b.ToTable("RoleViews");
                 });
 
             modelBuilder.Entity("Entity.Model.Security.User", b =>
@@ -313,7 +318,7 @@ namespace Entity.Migrations
 
                     b.HasIndex("PersonId");
 
-                    b.ToTable("Users", (string)null);
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("Entity.Model.Security.UserRole", b =>
@@ -346,7 +351,7 @@ namespace Entity.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserRoles", (string)null);
+                    b.ToTable("UserRoles");
                 });
 
             modelBuilder.Entity("Entity.Model.Security.View", b =>
@@ -386,7 +391,7 @@ namespace Entity.Migrations
 
                     b.HasIndex("ModuloId");
 
-                    b.ToTable("Views", (string)null);
+                    b.ToTable("Views");
                 });
 
             modelBuilder.Entity("Entity.Model.Security.City", b =>
@@ -409,6 +414,17 @@ namespace Entity.Migrations
                         .IsRequired();
 
                     b.Navigation("Country");
+                });
+
+            modelBuilder.Entity("Entity.Model.Security.Person", b =>
+                {
+                    b.HasOne("Entity.Model.Security.City", "City")
+                        .WithMany()
+                        .HasForeignKey("CityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("City");
                 });
 
             modelBuilder.Entity("Entity.Model.Security.RoleView", b =>

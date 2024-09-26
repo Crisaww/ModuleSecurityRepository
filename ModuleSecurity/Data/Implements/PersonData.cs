@@ -56,7 +56,7 @@ namespace Data.Implements
         {
             var sql = @"SELECT 
                 Id, 
-                CONCAT(First_name, ' - ', Last_name, ' - ', Phone, ' - ', Email, ' - ', Adress, ' - ', Type_document, ' - ', Document, ' - ', State) AS TextoMostrar 
+                CONCAT(First_name, ' - ', Last_name, ' - ', Phone, ' - ', Email, ' - ', Adress, ' - ', Type_document, ' - ', Document, ' - ', State, ' - ', CityId) AS TextoMostrar 
             FROM 
                 persons 
             WHERE 
@@ -68,16 +68,20 @@ namespace Data.Implements
 
         public async Task<IEnumerable<PersonDto>> GetAll()
         {
-            var sql = @"SELECT 
-                        *
-                    FROM 
-                        persons 
-                    WHERE 
-                        DeleteAt IS NULL AND State = 1 
-                    ORDER BY 
-                        Id ASC";
+            var sql = @"SELECT
+                    per.Id,
+                    per.First_name,
+                    per.Last_name,
+                    per.Phone,
+                    per.CityId,
+                    ci.Name AS NameCity
+                FROM persons AS per
+                INNER JOIN cities AS ci ON ci.Id = per.CityId
+                WHERE ISNULL(per.DeleteAt)";
+
             return await context.QueryAsync<PersonDto>(sql);
         }
+
 
         // Método para obtener un rol por su ID
         public async Task<Person> GetById(int id)

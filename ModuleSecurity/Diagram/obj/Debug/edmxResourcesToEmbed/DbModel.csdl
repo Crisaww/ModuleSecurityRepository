@@ -34,7 +34,15 @@
     </AssociationSet>
     <EntitySet Name="CitySet" EntityType="DbModel.City" />
     <EntitySet Name="CountrySet" EntityType="DbModel.Country" />
-    <EntitySet Name="StateSet" EntityType="DbModel.State" />
+    <EntitySet Name="DepartmentSet" EntityType="DbModel.Department" />
+    <AssociationSet Name="DepartmentCountry" Association="DbModel.DepartmentCountry">
+      <End Role="Department" EntitySet="DepartmentSet" />
+      <End Role="Country" EntitySet="CountrySet" />
+    </AssociationSet>
+    <AssociationSet Name="DepartmentCity" Association="DbModel.DepartmentCity">
+      <End Role="Department" EntitySet="DepartmentSet" />
+      <End Role="City" EntitySet="CitySet" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Person">
     <Key>
@@ -162,6 +170,8 @@
     <Property Name="UpdateAt" Type="DateTime" Nullable="false" />
     <Property Name="DeleteAt" Type="DateTime" Nullable="false" />
     <Property Name="Population" Type="String" Nullable="false" />
+    <NavigationProperty Name="Department" Relationship="DbModel.DepartmentCity" FromRole="City" ToRole="Department" />
+    <Property Name="DepartmentId" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="Country">
     <Key>
@@ -177,7 +187,7 @@
     <Property Name="Coin" Type="String" Nullable="false" />
     <Property Name="Official_language" Type="String" Nullable="false" />
   </EntityType>
-  <EntityType Name="State">
+  <EntityType Name="Department">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
@@ -188,5 +198,22 @@
     <Property Name="DeleteAt" Type="DateTime" Nullable="false" />
     <Property Name="Population" Type="String" Nullable="false" />
     <Property Name="Capital" Type="String" Nullable="false" />
+    <NavigationProperty Name="Country" Relationship="DbModel.DepartmentCountry" FromRole="Department" ToRole="Country" />
   </EntityType>
+  <Association Name="DepartmentCountry">
+    <End Type="DbModel.Department" Role="Department" Multiplicity="*" />
+    <End Type="DbModel.Country" Role="Country" Multiplicity="1" />
+  </Association>
+  <Association Name="DepartmentCity">
+    <End Type="DbModel.Department" Role="Department" Multiplicity="1" />
+    <End Type="DbModel.City" Role="City" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="City">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

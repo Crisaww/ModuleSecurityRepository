@@ -70,6 +70,7 @@ namespace Business.Implements
             PersonDto.Type_document = person.Type_document;
             PersonDto.Document = person.Document;
             PersonDto.State = person.State;
+            PersonDto.CityId = person.CityId; 
             return PersonDto;
         }
 
@@ -86,6 +87,7 @@ namespace Business.Implements
             person.Type_document = entity.Type_document;
             person.Document = entity.Document;
             person.State = entity.State;
+            person.CityId = entity.CityId;
             return person;
         }
 

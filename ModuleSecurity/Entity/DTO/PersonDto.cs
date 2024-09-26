@@ -17,6 +17,8 @@ namespace Entity.DTO
         public string Type_document { get; set; }
         public string Document { get; set; }
         public bool State { get; set; }
-       
+        public string ? City { get; set; }
+        public int CityId { get; set; }
+
     }
 }

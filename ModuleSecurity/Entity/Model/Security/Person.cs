@@ -21,5 +21,7 @@ namespace Entity.Model.Security
         public DateTime ? UpdateAt { get; set; }
         public DateTime ? DeleteAt { get; set; }
         public bool State {  get; set; }
+        public int CityId { get; set; }
+        public City City { get; set; }
     }
 }
